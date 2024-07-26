@@ -1,0 +1,52 @@
+.loginContainer {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.304);
+  width: 350px;
+  margin: 3em auto;
+}
+
+.title {
+  margin: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #0e8ce4;
+}
+
+.loginInputs {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.showPass {
+  margin-right: 5px;
+}
+
+.loginSubmitBtn {
+  width: 100%;
+  padding: 10px;
+  background-color: #0e8ce4;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all .4s ease;
+}
+
+.loginSubmitBtn:hover {
+  background-color: #007bff;
+}
+
+
+.loginLinks {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #0e8ce4;
+  text-decoration: none;
+}
