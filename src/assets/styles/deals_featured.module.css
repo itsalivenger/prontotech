@@ -1,0 +1,303 @@
+.productSlider {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .leftSide {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+  }
+  
+  .rightSide {
+    flex: 2;
+    min-width: 300px;
+  }
+  
+  .dealOfTheWeek {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .dealOfTheWeek img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .dealDetails {
+    padding: 20px;
+  }
+  
+  .dealDetails h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .dealDetails p {
+    margin: 5px 0;
+  }
+  
+  .timer {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .timer span {
+    margin: 0 5px;
+  }
+  
+  .tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .tabs button {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .tabs button.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+  }
+  
+  .slider {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .products {
+    display: flex;
+    transition: transform 0.3s ease;
+  }
+  
+  .product {
+    flex: 0 0 25%;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .product img {
+    width: 100%;
+    height: auto;
+    max-height: 150px;
+    object-fit: contain;
+  }
+  
+  .discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    color: white;
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+  
+  .price {
+    color: red;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .originalPrice {
+    text-decoration: line-through;
+    color: grey;
+    font-size: 14px;
+  }
+  
+  .name {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    .product {
+      flex: 0 0 33.33%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product {
+      flex: 0 0 50%;
+    }
+  
+    .leftSide, .rightSide {
+      flex: 1 1 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .product {
+      flex: 0 0 100%;
+    }
+  }
+.productSlider {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.leftSide {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 20px;
+}
+
+.rightSide {
+  flex: 2;
+  min-width: 300px;
+}
+
+.dealOfTheWeek {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 20px;
+}
+
+.dealOfTheWeek img {
+  width: 100%;
+  height: auto;
+}
+
+.dealDetails {
+  padding: 20px;
+}
+
+.dealDetails h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.dealDetails p {
+  margin: 5px 0;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.timer span {
+  margin: 0 5px;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.tabs button.active {
+  color: #007bff;
+  border-bottom: 2px solid #007bff;
+}
+
+.slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.products {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.product {
+  flex: 0 0 25%;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+.discount {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  padding: 2px 5px;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.price {
+  color: red;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: grey;
+  font-size: 14px;
+}
+
+.name {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .product {
+    flex: 0 0 33.33%;
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+    flex: 0 0 50%;
+  }
+
+  .leftSide, .rightSide {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .product {
+    flex: 0 0 100%;
+  }
+}
+  
