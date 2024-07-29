@@ -119,7 +119,7 @@ function Cart() {
                 </div>
 
                 <div className="row">
-                  <div className="col-md-12">
+                  <div>
                     <a className="btn btn-primary btn-lg btn-block" href="checkout.html">Proceed To Checkout</a>
                   </div>
                 </div>

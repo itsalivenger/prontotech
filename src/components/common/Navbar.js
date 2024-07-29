@@ -94,25 +94,25 @@ function Navbar({ contactInfo: { contactEmail, contactPhone } }) {
 
                         <div className="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
                             <div className="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-                                <div className="wishlist d-flex flex-row align-items-center justify-content-end">
+                                <Link to={'/wishlist'} className="wishlist d-flex flex-row align-items-center justify-content-end">
                                     <div className="wishlist_icon"><img src="images/heart.png" alt="" /></div>
                                     <div className="wishlist_content">
                                         <div className="wishlist_text"><a href="gegl">Wishlist</a></div>
                                         <div className="wishlist_count">115</div>
                                     </div>
-                                </div>
+                                </Link>
 
                                 <div className="cart">
-                                    <div className="cart_container d-flex flex-row align-items-center justify-content-end">
+                                    <Link to={'/cart'} className="cart_container d-flex flex-row align-items-center justify-content-end">
                                         <div className="cart_icon">
                                             <img src="images/cart.png" alt="" />
                                             <div className="cart_count"><span>{cartCount}</span></div>
                                         </div>
                                         <div className="cart_content">
-                                            <div className="cart_text"><Link to="/cart">Cart</Link></div>
+                                            <div className="cart_text"><span to="/cart">Cart</span></div>
                                             <div className="cart_price">{cartTotal} DH</div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

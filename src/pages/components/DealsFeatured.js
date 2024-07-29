@@ -18,7 +18,7 @@ const products = {
       { id: 3, name: 'Canon STM Kit', price: 225, imgSrc: "images/featured_3.png" },
       { id: 4, name: 'Lenovo IdeaPad', price: 379, imgSrc: "images/featured_3.png" },
       { id: 5, name: 'Apple iPod shuffle', price: 379, imgSrc: "images/featured_3.png" },
-      { id: 6, name: 'LUNA Smartphone', price: 225, originalPrice: 300, discount: '-25%', imgSrc: "images/featured_3.png" },
+      { id: 6, name: 'SONA Smartphone', price: 225, originalPrice: 300, discount: '-25%', imgSrc: "images/featured_3.png" },
       { id: 7, name: 'Samsung J330F', price: 379, imgSrc: "images/featured_3.png" },
       { id: 8, name: 'Digitus EDNET', price: 225, imgSrc: "images/featured_3.png" },
     
@@ -29,7 +29,7 @@ const products = {
       { id: 3, name: 'Canon STM Kit', price: 225, imgSrc: "images/featured_3.png" },
       { id: 4, name: 'Lenovo IdeaPad', price: 379, imgSrc: "images/featured_3.png" },
       { id: 5, name: 'Apple iPod shuffle', price: 379, imgSrc: "images/featured_3.png" },
-      { id: 6, name: 'LUNA Smartphone', price: 225, originalPrice: 300, discount: '-25%', imgSrc: "images/featured_3.png" },
+      { id: 6, name: 'WAKATA Smartphone', price: 225, originalPrice: 300, discount: '-25%', imgSrc: "images/featured_3.png" },
       { id: 7, name: 'Samsung J330F', price: 379, imgSrc: "images/featured_3.png" },
       { id: 8, name: 'Digitus EDNET', price: 225, imgSrc: "images/featured_3.png" },
     
