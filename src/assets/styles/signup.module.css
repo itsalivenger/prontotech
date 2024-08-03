@@ -33,6 +33,10 @@
     border-radius: 4px;
 }
 
+.showPass {
+  margin-right: 5px;
+}
+
 .submitBtn {
     background-color: #0e8ce4;
     color: white;

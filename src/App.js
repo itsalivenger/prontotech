@@ -11,6 +11,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Contact from './pages/Contact';
 import SingleProduct from './pages/SingleProduct';
+import Checkout from './pages/checkout';
 
 function App() {
   const contactInfo = {
@@ -23,14 +24,17 @@ function App() {
     <Router>
       <div className="App">
         <Navbar contactInfo={contactInfo} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="/contact" element={<Contact contactInfo={contactInfo} />} />
-          <Route path="/single-product" element={<SingleProduct />} />
-        </Routes>
+        <div className="webpageContainer">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/contact" element={<Contact contactInfo={contactInfo} />} />
+            <Route path="/single-product" element={<SingleProduct />} />
+            <Route path='/checkout' element={<Checkout />} />
+          </Routes>
+        </div>
         <Newsletter />
         <Footer contactInfo={contactInfo} />
       </div>

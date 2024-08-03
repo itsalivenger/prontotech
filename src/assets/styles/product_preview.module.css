@@ -1,0 +1,271 @@
+.productContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.imageSection {
+    flex: 1;
+    max-width: 500px;
+    text-align: center;
+}
+
+.mainImageContainer {
+    position: relative;
+}
+
+.mainImage {
+    width: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.mainImage:hover {
+    transform: scale(1.1);
+}
+
+.zoomIcon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.thumbnailContainer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.thumbnail {
+    width: 100px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.thumbnail:hover {
+    border-color: blue;
+    transform: scale(1.1);
+}
+
+.activeThumbnail {
+    border-color: blue;
+}
+
+.detailsSection {
+    flex: 1;
+    max-width: 500px;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.brand,
+.model,
+.reference,
+.description,
+.specifications,
+.stock,
+.price {
+    margin-bottom: 5px;
+}
+
+.price {
+    color: red;
+    font-size: 1.5em;
+}
+
+.quantityContainer {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.quantityButton {
+    padding: 5px 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.quantityButton:hover {
+    background-color: darkblue;
+}
+
+.quantity {
+    padding: 0 10px;
+}
+
+.productPropTitle {
+    font-weight: bold;
+    color: #111;
+}
+
+.productsProps {
+    font-size: 16px;
+    color: #333030;
+}
+
+.addToCart {
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.addToCart span{
+    margin: 0;
+}
+
+.titleUnderline{
+    width: 100%;
+    border: solid 1px gray;
+}
+
+.addToCart:hover {
+    background-color: darkgreen;
+}
+
+.socialMedia {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.shareButton {
+    background: #3b5998;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.shareButton:hover {
+    background: #2d4373;
+}
+
+.wishlistCompare {
+    display: flex;
+    gap: 10px;
+}
+
+.wishlistButton {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.wishlistButton:hover {
+    background: #e68a00;
+}
+
+.compareButton {
+    background: #9c27b0;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.compareButton:hover {
+    background: #8e24aa;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    width: 40%;
+    max-width: 800px;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.modalImage {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.modalImage:hover {
+    transform: scale(1.1);
+}
+
+.additionalInfo {
+    margin-top: 20px;
+}
+
+.infoBlock {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.infoText {
+    display: flex;
+    flex-direction: column;
+}

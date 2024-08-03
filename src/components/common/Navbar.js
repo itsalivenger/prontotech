@@ -1,15 +1,20 @@
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import { Link } from "react-router-dom";
+import Top_bar from "./navbarComps/top_bar";
 
+
+
+
+// MAIN NAV FIHA HUGE PROBLEM F WIDTH HWA LI KAYCAUSI L GAP FLIMEN T
 function Navbar({ contactInfo: { contactEmail, contactPhone } }) {
     const [searchProducts, setSearchProducts] = useState('');
     const [searchCategory, setSearchCategory] = useState('All Categories');
-    const [cartCount, setcartCount] = useState(0);
-    const [cartTotal, setCartTotal] = useState(0);
+    const [cartCount] = useState(0);
+    const [cartTotal] = useState(0);
 
     useEffect(() => {
-        api('cart', 'POST', { type: 'cartCount' })
+        api('cart', 'POST', { type: 'cart' })
     }, [])
     
     function handleSearchSubmit() {
@@ -19,43 +24,7 @@ function Navbar({ contactInfo: { contactEmail, contactPhone } }) {
 
     return (
         <header className="header">
-            <div className="top_bar">
-                <div className="container">
-                    <div className="row">
-                        <div className="col d-flex flex-row">
-                            <div className="top_bar_contact_item"><div className="top_bar_icon"><img src="images/phone.png" alt="" /></div><a href={`tel:${contactPhone}`}>Give Us A Call</a></div>
-                            <div className="top_bar_contact_item"><div className="top_bar_icon"><img src="images/mail.png" alt="" /></div><a href={`mailto:${contactEmail}?subject=Subject%20Here&body=Body%20content%20here`}><span className="__cf_email__" data-cfemail="5f393e2c2b2c3e333a2c1f38323e3633713c3032"></span>Email Us</a></div>
-                            <div className="top_bar_content ml-auto">
-                                <div className="top_bar_menu">
-                                    <ul className="standard_dropdown top_bar_dropdown">
-                                        <li>
-                                            <Link href="#">English<i className="fa fa-chevron-down"></i></Link>
-                                            <ul>
-                                                <li><Link to="#">French</Link></li>
-                                                <li><Link to="#">Arabic</Link></li>
-                                                <li><Link to="#">Spanish</Link></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <Link href="#">$ US dollar<i className="fa fa-chevron-down"></i></Link>
-                                            <ul>
-                                                <li><Link href="#">EUR Euro</Link></li>
-                                                <li><Link href="#">GBP British Pound</Link></li>
-                                                <li><Link href="#">JPY Japanese Yen</Link></li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div className="top_bar_user">
-                                    <div className="user_icon"><img src="images/user.svg" alt="" /></div>
-                                    <div><Link to="signup">Register</Link></div>
-                                    <div><Link to="login">Sign in</Link></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Top_bar contactInfo={ { contactEmail, contactPhone } } />
 
             <div className="header_main">
                 <div className="container">
@@ -97,7 +66,7 @@ function Navbar({ contactInfo: { contactEmail, contactPhone } }) {
                                 <Link to={'/wishlist'} className="wishlist d-flex flex-row align-items-center justify-content-end">
                                     <div className="wishlist_icon"><img src="images/heart.png" alt="" /></div>
                                     <div className="wishlist_content">
-                                        <div className="wishlist_text"><a href="gegl">Wishlist</a></div>
+                                        <div className="wishlist_text">Wishlist</div>
                                         <div className="wishlist_count">115</div>
                                     </div>
                                 </Link>
@@ -109,7 +78,7 @@ function Navbar({ contactInfo: { contactEmail, contactPhone } }) {
                                             <div className="cart_count"><span>{cartCount}</span></div>
                                         </div>
                                         <div className="cart_content">
-                                            <div className="cart_text"><span to="/cart">Cart</span></div>
+                                            <div className="cart_text"><span>Cart</span></div>
                                             <div className="cart_price">{cartTotal} DH</div>
                                         </div>
                                     </Link>

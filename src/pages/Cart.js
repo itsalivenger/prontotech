@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import api from '../services/api';
 import Trends from './components/Trends';
 import Reviews from './components/Reviews';
-import BestSellers from './components/BestSellers';
+import { Link } from 'react-router-dom';
 
 function Cart() {
   const [orderTotal, setOrderTotal] = useState(0);
@@ -120,7 +120,7 @@ function Cart() {
 
                 <div className="row">
                   <div>
-                    <a className="btn btn-primary btn-lg btn-block" href="checkout.html">Proceed To Checkout</a>
+                    <Link className="btn btn-primary btn-lg btn-block" to="/checkout">Proceed To Checkout</Link>
                   </div>
                 </div>
               </div>

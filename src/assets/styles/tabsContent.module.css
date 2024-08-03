@@ -1,0 +1,27 @@
+.tabContainer {
+    margin-top: 20px;
+  }
+  
+  .tabHeaders {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tabHeader {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .tabHeader.active {
+    border-bottom: 2px solid red;
+  }
+  
+  .tabContent {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+  
