@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from '../../../assets/styles/top_bar.module.css'
 
-function Top_bar({ contactInfo: { contactEmail, contactPhone } }) {
+function TopBar({ contactInfo: { contactEmail, contactPhone } }) {
     return (
         <div className={styles.top_bar}>
             <div className={"container"}>
@@ -43,4 +43,4 @@ function Top_bar({ contactInfo: { contactEmail, contactPhone } }) {
     );
 }
 
-export default Top_bar;
+export default TopBar;

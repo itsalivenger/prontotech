@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.reverse{
+  flex-direction: row-reverse;
+}
+
+.textContainer {
+  flex: 1;
+  margin: 20px;
+}
+
+.imageContainer {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.imageContainer img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+
+  .textContainer,
+  .imageContainer {
+    margin: 10px;
+  }
+}

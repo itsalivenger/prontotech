@@ -13,7 +13,7 @@ const testos = {
     description: "hada wahd pc daa3r fih bf ta3 hwayej o fih bzf t ram o l3ibat",
     stock: '10',
     price: '2200,00',
-    images: ["./images/best_1.png", "./images/best_2.png", "./images/best_3.png"] // Replace with actual images
+    images: ["./images/pc.jpg", "./images/pc2.jpg", "./images/pc3.jpg"] // Replace with actual images
 };
 
 const ProductComponent = () => {
@@ -126,7 +126,7 @@ const ProductComponent = () => {
                     </div>
                 )}
             </div>
-            {/* <TabComponent /> */}
+            <TabComponent />
         </div>
     );
 };

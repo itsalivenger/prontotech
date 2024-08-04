@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import api from "../../services/api";
 import { Link } from "react-router-dom";
-import Top_bar from "./navbarComps/top_bar";
+import TopBar from "./navbarComps/top_bar";
+import HeaderMain from "./navbarComps/header_main";
 
 
 
@@ -24,70 +25,9 @@ function Navbar({ contactInfo: { contactEmail, contactPhone } }) {
 
     return (
         <header className="header">
-            <Top_bar contactInfo={ { contactEmail, contactPhone } } />
+            <TopBar contactInfo={ { contactEmail, contactPhone } } />
 
-            <div className="header_main">
-                <div className="container">
-                    <div className="row">
-
-                        <div className="col-lg-2 col-sm-3 col-3 order-1">
-                            <div className="logo_container">
-                                <div className="logo"><a href="gegl">OneTech</a></div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
-                            <div className="header_search">
-                                <div className="header_search_content">
-                                    <div className="header_search_form_container">
-                                        <input type="text" className="header_search_input" placeholder="Search for products..." value={searchProducts} onChange={(e) => setSearchProducts(e.target.value)} />
-                                        <div className="custom_dropdown">
-                                            <div className="custom_dropdown_list">
-                                                <span className="custom_dropdown_placeholder clc">All Categories</span>
-                                                <i className="fa fa-chevron-down"></i>
-                                                <ul onClick={(e) => setSearchCategory(e.target.innerText)} className="custom_list clc">
-                                                    <li><a className="clc" href="gegl">All Categories</a></li>
-                                                    <li><a className="clc" href="gegl">Computers</a></li>
-                                                    <li><a className="clc" href="gegl">Laptops</a></li>
-                                                    <li><a className="clc" href="gegl">Cameras</a></li>
-                                                    <li><a className="clc" href="gegl">Hardware</a></li>
-                                                    <li><a className="clc" href="gegl">Smartphones</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <button type="submit" onClick={handleSearchSubmit} className="header_search_button trans_300" value="Submit"><img src="images/search.png" alt="" /></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
-                            <div className="wishlist_cart d-flex flex-row align-items-center justify-content-end">
-                                <Link to={'/wishlist'} className="wishlist d-flex flex-row align-items-center justify-content-end">
-                                    <div className="wishlist_icon"><img src="images/heart.png" alt="" /></div>
-                                    <div className="wishlist_content">
-                                        <div className="wishlist_text">Wishlist</div>
-                                        <div className="wishlist_count">115</div>
-                                    </div>
-                                </Link>
-
-                                <div className="cart">
-                                    <Link to={'/cart'} className="cart_container d-flex flex-row align-items-center justify-content-end">
-                                        <div className="cart_icon">
-                                            <img src="images/cart.png" alt="" />
-                                            <div className="cart_count"><span>{cartCount}</span></div>
-                                        </div>
-                                        <div className="cart_content">
-                                            <div className="cart_text"><span>Cart</span></div>
-                                            <div className="cart_price">{cartTotal} DH</div>
-                                        </div>
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <HeaderMain />
 
             <nav className="main_nav">
                 <div className="container">
