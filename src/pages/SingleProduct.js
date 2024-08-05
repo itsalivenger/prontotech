@@ -2,6 +2,11 @@ import { useEffect, useState } from 'react';
 import styles from '../assets/styles/product_preview.module.css';
 import SectionTitle from './components/SectionTitle'
 import TabComponent from './components/TabsContent';
+import Carousel from './components/Carousel';
+import ProductCard from './components/Productcard'
+import temp from '../assets/styles/temp'
+import ProntoTechBtn from './components/ProntoTechButton';
+import Breadcrumb from './components/BreadCrumb';
 
 
 const testos = {
@@ -16,6 +21,7 @@ const testos = {
     images: ["./images/pc.jpg", "./images/pc2.jpg", "./images/pc3.jpg"] // Replace with actual images
 };
 
+
 const ProductComponent = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
     const [product] = useState(testos)
@@ -27,6 +33,9 @@ const ProductComponent = () => {
         // setProduct(product)
         console.log("product");
     }, [])
+
+    const addToCompare = ()=>{}
+    const addToWishlist = ()=>{}
 
     const addToCart = () => {
         // api('/cart', "POST", {type: 'addToCart', {product, quantity}})
@@ -47,6 +56,7 @@ const ProductComponent = () => {
 
     return (
         <div>
+        <Breadcrumb items={["Home", "Product Preview", product.title]} />
             <SectionTitle title={"Preview Product:"} />
             <div className={styles.productContainer}>
                 <div className={styles.imageSection}>
@@ -90,15 +100,11 @@ const ProductComponent = () => {
                         <button onClick={increaseQuantity} className={styles.quantityButton}>+</button>
                     </div>
                     <div>
-                        <button onClick={addToCart} className={styles.addToCart}>Ajouter au Panier &nbsp; <span className='fa fa-plus'></span></button>
-                    </div>
-                    <div className={styles.socialMedia}>
-                        <button className={styles.shareButton}>Share on Facebook &nbsp; <span className='fa fa-facebook'></span></button>
-                        <button className={styles.shareButton}>Share on Twitter &nbsp; <span className='fa fa-twitter'></span></button>
+                        <ProntoTechBtn text={"Ajouter Au Panier"} onClick={addToCart} className={styles.addToCart} icon={"fa fa-plus"} />
                     </div>
                     <div className={styles.wishlistCompare}>
-                        <button className={styles.wishlistButton}>Ajouter Souhaits &nbsp; <span className='fa fa-heart'></span></button>
-                        <button className={styles.compareButton}>Ajouter Comparer &nbsp; <span className='fa fa-list'></span></button>
+                        <button onClick={addToWishlist} className={styles.wishlistButton}>Ajouter Souhaits &nbsp; <span className='fa fa-heart'></span></button>
+                        <button onClick={addToCompare} className={styles.compareButton}>Ajouter Comparer &nbsp; <span className='fa fa-list'></span></button>
                     </div>
                     <div className={styles.additionalInfo}>
                         <div className={styles.infoBlock}>
@@ -116,6 +122,11 @@ const ProductComponent = () => {
                             </div>
                         </div>
                     </div>
+
+                    <div className={styles.socialMedia}>
+                        <button className={styles.shareButton + ` ${styles.facebook}`}> <span className='fa fa-facebook'></span> &nbsp; Share</button>
+                        <button className={styles.shareButton + ` ${styles.twitter}`}> <span className='fa fa-twitter'></span> &nbsp; Share</button>
+                    </div>
                 </div>
                 {modalIsOpen && (
                     <div className={styles.modalOverlay} onClick={closeModal}>
@@ -127,6 +138,11 @@ const ProductComponent = () => {
                 )}
             </div>
             <TabComponent />
+            <Carousel>
+                {temp.map((product, index) => (
+                    <ProductCard key={index} product={product} />
+                ))}
+            </Carousel>
         </div>
     );
 };

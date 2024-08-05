@@ -24,6 +24,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar contactInfo={contactInfo} />
+
         <div className="webpageContainer">
           <Routes>
             <Route path="/" element={<Home />} />

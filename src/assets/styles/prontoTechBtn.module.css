@@ -1,0 +1,41 @@
+.addToCart {
+    position: relative;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #00abd0, #dc63ab);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+  
+  .addToCart::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(45deg, #dc63ab, #00abd0);
+    transition: left 0.5s ease;
+    z-index: 0;
+  }
+  
+  .addToCart:hover::before {
+    left: 0;
+  }
+  
+  .addToCart span {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+  }
+  
+  .addToCart:hover {
+    color: white; /* Ensure text color stays white during hover */
+  }
+  

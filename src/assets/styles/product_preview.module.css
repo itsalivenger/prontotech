@@ -92,21 +92,38 @@
 .quantityContainer {
     display: flex;
     align-items: center;
-    margin: 10px 0;
+    border-radius: 5px;
 }
 
 .quantityButton {
-    padding: 5px 10px;
-    background-color: blue;
-    color: white;
+    background-color: #d3d3d3;
     border: none;
-    cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .quantityButton:hover {
-    background-color: darkblue;
+    background-color: #a9a9a9;
+    transform: scale(1.1);
+}
+
+.quantityButton:active {
+    transform: scale(0.9);
+}
+
+.quantity {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.quantityContainer:hover .quantity {
+    color: #555;
 }
 
 .quantity {
@@ -122,32 +139,50 @@
     font-size: 16px;
     color: #333030;
 }
-
 .addToCart {
+    position: relative;
     padding: 10px 20px;
-    background-color: green;
+    background: linear-gradient(45deg, #00abd0, #dc63ab);
     color: white;
     border: none;
     cursor: pointer;
     margin: 10px 0;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    overflow: hidden;
     display: flex;
     align-items: center;
-    gap: .5em;
-}
-
-.addToCart span{
+    gap: 0.5em;
+  }
+  
+  .addToCart::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(45deg, #dc63ab, #00abd0);
+    transition: left 0.5s ease;
+    z-index: 0;
+  }
+  
+  .addToCart:hover::before {
+    left: 0;
+  }
+  
+  .addToCart span {
+    position: relative;
+    z-index: 1;
     margin: 0;
-}
-
-.titleUnderline{
+  }
+  
+  .addToCart:hover {
+    color: white; 
+  }
+  
+.titleUnderline {
     width: 100%;
     border: solid 1px gray;
-}
-
-.addToCart:hover {
-    background-color: darkgreen;
 }
 
 .socialMedia {
@@ -156,8 +191,15 @@
     margin-bottom: 10px;
 }
 
+.twitter {
+    background-color: #68bbf0;
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
 .shareButton {
-    background: #3b5998;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -176,7 +218,7 @@
 }
 
 .wishlistButton {
-    background: #ff9800;
+    background: #f4169d;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -186,11 +228,11 @@
 }
 
 .wishlistButton:hover {
-    background: #e68a00;
+    background: #dc63ab;
 }
 
 .compareButton {
-    background: #9c27b0;
+    background: #00abd0;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -200,7 +242,7 @@
 }
 
 .compareButton:hover {
-    background: #8e24aa;
+    background: #60aebf;
 }
 
 .modalOverlay {

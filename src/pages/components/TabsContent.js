@@ -4,6 +4,7 @@ import ProductDetails from './ProductDetails';
 import Reviews from './Reviews';
 import ReviewComponent from './ProductReviews';
 import ProductOverview from './ProductOverview';
+import SectionTitle from './SectionTitle';
 
 const TabComponent = () => {
   const [activeTab, setActiveTab] = useState('description');
@@ -44,6 +45,7 @@ const TabComponent = () => {
           <Reviews />
         </div>}
       </div>
+      <SectionTitle title="Similar Products" />
     </div>
   );
 };

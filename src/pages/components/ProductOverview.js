@@ -18,6 +18,7 @@ function ProductOverview() {
             <ThinkStation imageSrc={'./images/ThinkStation.jpg'} />
             <ImageText imageSrc={imgSrc} text={text} title={title} />
             <ThinkStation reverse={true} imageSrc={'./images/mockup2.webp'} />
+            <ImageText imageSrc={imgSrc} text={text} />
         </div>
     );
 }
