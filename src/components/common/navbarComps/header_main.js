@@ -4,7 +4,7 @@ import api from "../../../services/api";
 import { Link } from "react-router-dom";
 
 
-function HeaderMain() {
+function HeaderMain({ toggleCart }) {
     const [searchProducts, setSearchProducts] = useState('');
     const [searchCategory, setSearchCategory] = useState('All Categories');
     const [cartCount] = useState(0);
@@ -24,7 +24,7 @@ function HeaderMain() {
 
                     <div className={"col-lg-2 col-sm-3 col-3 order-1"}>
                         <div className={styles.logo_container}>
-                            <div className={styles.logo}><a href="gegl">OneTech</a></div>
+                            <div className={styles.logo}><a href="gegl"><img alt="Logo" className="img img-fluid" src={'./images/prontoLogo.png'} /></a></div>
                         </div>
                     </div>
 
@@ -47,7 +47,7 @@ function HeaderMain() {
                                             </ul>
                                         </div>
                                     </div>
-                                    <button type="submit" onClick={handleSearchSubmit} className={styles.header_search_button + " " + styles.trans_300} value="Submit"><img src="images/search.png" alt="" /></button>
+                                    <button type="submit" onClick={handleSearchSubmit} className={styles.header_search_button + " " + styles.trans_300} value="Submit"><img src="images/search.png" alt="Search icon" /></button>
                                 </div>
                             </div>
                         </div>
@@ -63,18 +63,18 @@ function HeaderMain() {
                                 </div>
                             </Link>
 
-                            <div className={"cart"}>
-                                <Link to={'/cart'} className={"cart_container d-flex flex-row align-items-center justify-content-end"}>
+                            <Link onClick={toggleCart} className={"cart"}>
+                                <div className={"cart_container d-flex flex-row align-items-center justify-content-end"}>
                                     <div className={styles.cart_icon}>
                                         <img src="images/cart.png" alt="" />
                                         <div className={styles.cart_count}><span>{cartCount}</span></div>
                                     </div>
                                     <div className={styles.cart_content}>
-                                        <div className={styles.cart_text}><span>Cart</span></div>
+                                        <div  className={styles.cart_text}><span>Cart</span></div>
                                         <div className={styles.cart_price}>{cartTotal} DH</div>
                                     </div>
-                                </Link>
-                            </div>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

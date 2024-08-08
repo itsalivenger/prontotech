@@ -1,0 +1,122 @@
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    border: 1px solid #111;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    height: fit-content;
+}
+
+.header {
+    background-color: #e61476;
+    border-radius: 10px 10px 0 0;
+    color: white;
+    padding: 20px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menuItem {
+    width: 100%;
+    border: 1px solid gray
+}
+
+.menuLink {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: #111;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menuLink:hover {
+    background-color: #37b9d3;
+    color: white;
+    transform: scale(1.05);
+}
+
+.menuLabel {
+    margin-left: 10px;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .menuLink {
+        justify-content: center;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+}
+
+.sidebarContainer {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 1em;
+    border-right: 1px solid #ddd;
+}
+
+.navItem {
+    margin-bottom: 1em;
+}
+
+.navButton {
+    display: flex;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: #37b9d3;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1em;
+}
+
+.navButton:hover {
+    background-color: #2a8da5;
+    transform: scale(1.05);
+}
+
+.navButton.active {
+    background-color: #e61476;
+}
+
+.content {
+    padding: 1em;
+    background-color: #fff;
+    border-left: 2px solid #37b9d3;
+}
+
+@media (max-width: 768px) {
+    .sidebarContainer {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+}

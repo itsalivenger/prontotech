@@ -50,12 +50,17 @@
 }
 
 .applyButton, .placeOrderButton {
-  background-color: #007bff;
+  background-color: #37b9d3;
   color: #fff;
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 4px;
+  transition: all .5s ease;
+}
+
+.applyButton:hover, .placeOrderButton:hover{
+  background-color: #1badcb;
 }
 
 .applyButton {
@@ -105,13 +110,19 @@
 
 .couponBtn {
   width: 100px; /* Set button width */
-  background-color: #007bff; /* Pink button color */
+  background-color: #37b9d3; /* Pink button color */
   color: white; /* Button text color */
   border: none; /* No border */
   padding: 10px 15px; /* Button padding */
   cursor: pointer; /* Pointer cursor on hover */
   border-radius: 0 4px 4px 0; /* Rounded corners for button */
+  transition: all .5s ease;
 }
+
+.couponBtn:hover{
+  background-color: #1badcb;
+}
+
 .doubleIn{
 display: flex;
 justify-content: space-between;

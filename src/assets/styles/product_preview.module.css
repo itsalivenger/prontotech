@@ -51,12 +51,12 @@
 }
 
 .thumbnail:hover {
-    border-color: blue;
+    border-color: #111;
     transform: scale(1.1);
 }
 
 .activeThumbnail {
-    border-color: blue;
+    border-color: #111;
 }
 
 .detailsSection {
@@ -85,7 +85,7 @@
 }
 
 .price {
-    color: red;
+    color: #e61476;
     font-size: 1.5em;
 }
 
@@ -142,7 +142,7 @@
 .addToCart {
     position: relative;
     padding: 10px 20px;
-    background: linear-gradient(45deg, #00abd0, #dc63ab);
+    background: linear-gradient(45deg, #37b9d3, #e61476);
     color: white;
     border: none;
     cursor: pointer;
@@ -161,7 +161,7 @@
     left: -100%;
     width: 200%;
     height: 100%;
-    background: linear-gradient(45deg, #dc63ab, #00abd0);
+    background: linear-gradient(45deg, #e61476, #37b9d3);
     transition: left 0.5s ease;
     z-index: 0;
   }
@@ -218,7 +218,7 @@
 }
 
 .wishlistButton {
-    background: #f4169d;
+    background: #e61476;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -228,11 +228,11 @@
 }
 
 .wishlistButton:hover {
-    background: #dc63ab;
+    background: #fd429a;
 }
 
 .compareButton {
-    background: #00abd0;
+    background: #37b9d3;
     color: white;
     border: none;
     padding: 5px 10px;
@@ -242,7 +242,7 @@
 }
 
 .compareButton:hover {
-    background: #60aebf;
+    background: #23adcc;
 }
 
 .modalOverlay {
@@ -270,7 +270,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    background: red;
+    background: #37b9d3;
     color: white;
     border: none;
     padding: 5px 10px;

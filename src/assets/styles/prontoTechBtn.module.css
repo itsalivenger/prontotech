@@ -1,5 +1,4 @@
 .addToCart {
-    position: relative;
     padding: 10px 20px;
     background: linear-gradient(45deg, #00abd0, #dc63ab);
     color: white;
@@ -11,6 +10,8 @@
     display: flex;
     align-items: center;
     gap: 0.5em;
+    position: relative;
+    z-index: 2;
   }
   
   .addToCart::before {

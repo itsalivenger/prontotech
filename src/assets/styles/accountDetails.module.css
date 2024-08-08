@@ -1,0 +1,88 @@
+.accountDetails {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.detailsForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.column {
+  flex: 1;
+  min-width: 300px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.formGroup label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.formGroup input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.formGroup small {
+  margin-top: 5px;
+  color: #888;
+}
+
+.formActions {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.editButton,
+.saveButton,
+.cancelButton {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #37b9d3;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.editButton:hover,
+.saveButton:hover,
+.cancelButton:hover {
+  background: #2a8da5;
+}
+
+.cancelButton {
+  background: #e61476;
+}
+
+.cancelButton:hover {
+  background: #d0136a;
+}
+
+@media (max-width: 768px) {
+  .detailsForm {
+    flex-direction: column;
+  }
+
+  .formGroup {
+    width: 100%;
+  }
+
+  .column {
+    width: 100%;
+  }
+}

@@ -1,0 +1,16 @@
+.profilePageContainer{
+    display: flex;
+    gap: 2em;
+}
+
+.mainContent {
+    flex-grow: 1;
+    border: 1px gray solid;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .profilePageContainer{
+        flex-direction: column;
+    }
+}

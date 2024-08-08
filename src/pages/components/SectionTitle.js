@@ -4,7 +4,7 @@ function SectionTitle({title}) {
     return (
         <div className={styles.sectionTitleContainer + " container"}>
             <h2 className={styles.title}>{title}</h2>
-            <div className={styles.underline + " prontoBg"}></div>
+            <div className={styles.underline}></div>
         </div>
     );
 }

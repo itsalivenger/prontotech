@@ -34,8 +34,8 @@ const ProductComponent = () => {
         console.log("product");
     }, [])
 
-    const addToCompare = ()=>{}
-    const addToWishlist = ()=>{}
+    const addToCompare = () => { }
+    const addToWishlist = () => { }
 
     const addToCart = () => {
         // api('/cart', "POST", {type: 'addToCart', {product, quantity}})
@@ -54,9 +54,16 @@ const ProductComponent = () => {
     const increaseQuantity = () => setQuantity(quantity + 1);
     const decreaseQuantity = () => setQuantity(quantity > 1 ? quantity - 1 : 1);
 
+    const breadcrumbList = ["Home",
+        <>
+            <span className={'fa fa-store'}></span> &nbsp; Shop
+        </>,
+        <>
+            <span className={'fa fa-eye'}></span> &nbsp; Preview Product
+        </>, product.title];
     return (
         <div>
-        <Breadcrumb items={["Home", "Product Preview", product.title]} />
+            <Breadcrumb items={breadcrumbList} />
             <SectionTitle title={"Preview Product:"} />
             <div className={styles.productContainer}>
                 <div className={styles.imageSection}>
@@ -137,6 +144,7 @@ const ProductComponent = () => {
                     </div>
                 )}
             </div>
+            <SectionTitle title={"Informations Supplementaires"} />
             <TabComponent />
             <Carousel>
                 {temp.map((product, index) => (

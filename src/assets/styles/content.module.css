@@ -1,0 +1,21 @@
+.body {
+    font-size: 1em;
+}
+
+.content {
+    flex-grow: 1;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+    }
+}

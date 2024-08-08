@@ -19,7 +19,7 @@
   bottom: 0;
   width: 0;
   height: 2px;
-  background-color: red;
+  background-color: #e61476;
   transition: width 0.3s ease-in-out;
 }
 
@@ -42,15 +42,6 @@
   justify-content: space-around;
   border-bottom: 1px solid #ccc;
 }
-
-/* .tabHeader {
-  flex: 1;
-  text-align: center;
-  padding: 10px;
-  cursor: pointer;
-  font-weight: bold;
-} */
-
 
 .tabContent {
   padding: 10px;

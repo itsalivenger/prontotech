@@ -8,6 +8,11 @@
   transition: transform 0.3s ease;
 }
 
+.addToCartBtnContainer{
+  width: 80%;
+  margin: auto;
+}
+
 .productCard:hover {
   transform: scale(1.05); /* Slightly increased scale */
 }
@@ -34,6 +39,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1;
 }
 
 .productCard:hover .overlay {
@@ -42,7 +48,7 @@
 }
 
 .addToCartBtn {
-  background-color: red; /* You can change the color if needed */
+  background-color: #e61476; /* You can change the color if needed */
   color: white;
   border: none;
   padding: 10px 20px; /* Adjusted padding */
@@ -69,10 +75,10 @@
 }
 
 .productInfo strong {
-  color: red;
+  color: #e61476;
 }
 .addToWishlist {
-  color: red;
+  color: #e61476;
   font-size: 25px;
   position: absolute;
   top: 10%;

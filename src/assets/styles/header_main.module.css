@@ -304,3 +304,93 @@
 .custom_list li a:hover {
     color: #0e8ce4;
 }
+
+@media screen and (max-width: 991px) {
+
+    .logo_container,
+    .wishlist_cart {
+        height: 125px;
+    }
+
+    .header_search {
+        height: 50px;
+    }
+
+    .wishlist_cart {
+        height: 125px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    .header_search {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .logo a {
+        font-size: 24px;
+    }
+
+    .header_search {
+        display: none;
+    }
+
+    .logo_container,
+    .wishlist_cart {
+        height: 72px;
+    }
+
+    .wishlist {
+        margin-right: 23px;
+    }
+
+    .wishlist_icon {
+        width: 20px;
+    }
+
+    .wishlist_content {
+        margin-left: 6px;
+    }
+
+    .wishlist_text {
+        display: none;
+    }
+
+    .wishlist_text a,
+    .cart_text a {
+        font-size: 14px;
+    }
+
+    .wishlist_count,
+    .cart_price {
+        font-size: 12px;
+    }
+
+    .cart_icon {
+        width: 17px;
+    }
+
+    .cart_count {
+        width: 21px;
+        height: 21px;
+    }
+
+    .cart_count span {
+        line-height: 21px;
+    }
+
+    .cart_content {
+        margin-left: 18px;
+    }
+
+    .cart_text {
+        display: none;
+    }
+
+    .wishlist_text a,
+    .cart_text a {
+        font-size: 14px;
+    }
+}

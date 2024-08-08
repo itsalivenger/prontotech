@@ -1,7 +1,7 @@
 .breadcrumbContainer {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 1em 2em;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -14,7 +14,7 @@
 .breadcrumbItem {
   margin: 0 5px;
   color: #555;
-  font-size: 14px;
+  font-size: 18px;
   cursor: pointer;
 }
 

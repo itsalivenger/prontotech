@@ -1,6 +1,8 @@
 import styles from '../assets/styles/contact.module.css'
 import api from '../services/api';
 import { useState } from 'react';
+import SectionTitle from './components/SectionTitle';
+import Breadcrumb from './components/BreadCrumb';
 
 function Contact({ contactInfo: { contactEmail, contactPhone, address } }) {
     const [name, setName] = useState('');
@@ -15,6 +17,15 @@ function Contact({ contactInfo: { contactEmail, contactPhone, address } }) {
 
     return (
         <div>
+            <Breadcrumb items={["Home", <><span className='fa fa-phone'></span> &nbsp; Contact</>]} />
+            <SectionTitle title={"Contact Us"} />
+            <div className={styles.contact_image_container}>
+                <div className={styles.contactImageTextContainer}>
+                    <h4>We'd love to hear from you</h4>
+                    <p>Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879</p>
+                </div>
+                <img className={"img img-fluid"} src='./images/contact-bg.png' />
+            </div>
             <div className={styles.contact_info}>
                 <div className="container">
                     <div className="row">
@@ -51,12 +62,15 @@ function Contact({ contactInfo: { contactEmail, contactPhone, address } }) {
             </div>
 
 
+            <SectionTitle title={"Get in touch"} />
             <div className={styles.contact_form}>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-10 offset-lg-1">
+                            <div className={styles.contactInstructions}>
+                                Please Fill The Following Form And We'll Reach Out To You As Soon As We Can:
+                            </div>
                             <div className="contact_form_container">
-                                <div className={styles.contact_form_title}>Get in Touch</div>
 
                                 <form onSubmit={handleSubmit} id="contact_form">
                                     <div className={styles.contact_form_inputs + " d-flex flex-md-row flex-column justify-content-between align-items-between"}>
@@ -79,6 +93,7 @@ function Contact({ contactInfo: { contactEmail, contactPhone, address } }) {
                 <div className={styles.gapDiv}></div>
             </div>
 
+            <SectionTitle title={"Find Us"} />
             <div className={styles["map-container"] + " container"}>
                 <iframe title='map' src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d54348.95898629688!2d-8.004819154956055!3d31.639053927571737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sma!4v1721680338593!5m2!1sfr!2sma" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
