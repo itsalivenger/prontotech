@@ -1,315 +1,85 @@
-.main_nav {
-	width: 100%;
-	border-top: solid 1px #f2f2f2;
-	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-	background: #FFFFFF;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  border-radius: 5px;
+  background-color: #fff;
 }
 
-.header.scrolled .main_nav {
-	position: fixed;
-	top: 0;
-	left: 0;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
+.logo {
+  font-size: 22px;
+  font-weight: 500; /* Make the font weight lighter */
 }
 
-.main_nav_content {
-	width: 100%;
-	height: 60px;
+.links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  gap: 3em;
 }
 
-.cat_menu_container {
-	width: 293px;
-	height: 100%;
-	background: #0e8ce4;
-	padding-left: 35px;
-	cursor: pointer;
-	z-index: 1;
+.links a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  font-weight: 300; /* Lighter font */
+  transition: color 0.3s ease;
 }
 
-.cat_menu_title {
-	height: 100%;
+.links a:hover {
+  color: #e61476;
 }
 
-.cat_burger {
-	width: 18px;
-	height: 14px;
+.icons {
+  display: flex;
+  gap: 15px;
 }
 
-.cat_burger span {
-	display: block;
-	position: absolute;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background: #FFFFFF;
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #d3d3d3; /* Light gray border */
+  border-radius: 50%; /* Perfectly rounded */
+  color: #000;
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-.cat_burger span:nth-child(2) {
-	top: 6px;
+.icon:hover {
+  color: #e61476;
+  background-color: #f0f0f0;
+  border-color: #e61476;
 }
 
-.cat_burger span:nth-child(3) {
-	top: 12px;
+.fab {
+  font-size: 20px; /* Adjust the icon size */
 }
 
-.cat_menu_text {
-	font-size: 18px;
-	font-weight: 400;
-	color: #FFFFFF;
-	text-transform: uppercase;
-	margin-left: 20px;
+.facebook{
+  color: #3b5998;
 }
 
-.cat_menu_container ul {
-	display: block;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	/*visibility: hidden;
-	opacity: 0;*/
-	min-width: 100%;
-	background: #FFFFFF;
-	box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
-	-webkit-transition: opacity 0.3s ease;
-	-moz-transition: opacity 0.3s ease;
-	-ms-transition: opacity 0.3s ease;
-	-o-transition: opacity 0.3s ease;
-	transition: all 0.3s ease;
+.twitter{
+  color: #1DA1F2;
 }
 
-.cat_menu_container>ul {
-	padding-top: 13px;
+.instagram{
+  color: pink;
 }
 
-.cat_menu_container:hover .cat_menu {
-	visibility: visible;
-	opacity: 1;
+.dribble{
+  color: deeppink;
 }
 
-.cat_menu li {
-	display: block;
-	position: relative;
-	width: auto;
-	height: 46px;
-	border-bottom: solid 1px #f2f2f2;
-	padding-left: 35px;
-	padding-right: 30px;
-	white-space: nowrap;
+.tiktok{
+  color: #ff0050;
+  
 }
-
-.cat_menu li.hassubs>a i {
-	display: block;
-}
-
-.cat_menu li a {
-	display: block;
-	position: relative;
-	font-size: 16px;
-	font-weight: 300;
-	color: #000000;
-	line-height: 46px;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-
-.cat_menu li a:hover {
-	color: #0e8ce4;
-}
-
-.cat_menu li a i {
-	display: none;
-	position: absolute;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	transform: translateY(-50%);
-	right: 0;
-	font-size: 12px;
-}
-
-.cat_menu li ul {
-	display: block;
-	position: absolute;
-	top: 35px;
-	left: 100%;
-	visibility: hidden;
-	opacity: 0;
-	width: 100%;
-	background: #FFFFFF;
-	box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-.cat_menu li:hover>ul {
-	top: 0;
-	visibility: visible;
-	opacity: 1;
-}
-
-.main_nav_dropdown li {
-	margin-right: 35px;
-}
-
-.main_nav_dropdown li:last-child {
-	margin-right: 0px;
-}
-
-.main_nav_dropdown li a {
-	font-size: 18px;
-	font-weight: 400;
-	color: #a19a9a;
-	line-height: 60px;
-}
-
-.main_nav_dropdown li li {
-	padding-left: 15px;
-	padding-right: 15px;
-	margin-right: 0px;
-}
-
-.menu_trigger_container {
-	display: none;
-	width: auto;
-	height: 100%;
-	padding-right: 25px;
-	padding-left: 25px;
-	cursor: pointer;
-}
-
-.menu_trigger {
-	height: 100%;
-}
-
-.menu_burger_inner {
-	display: inline-block;
-}
-
-.menu_trigger_text {
-	display: inline-block;
-	font-size: 18px;
-	font-weight: 400;
-	color: #FFFFFF;
-	text-transform: uppercase;
-	margin-right: 16px;
-}
-
-@media screen and(max-width: 1200) {
-
-	.cat_menu_container {
-		width: 211px;
-		padding-left: 25px;
-	}
-
-	.main_nav_dropdown li {
-		margin-right: 30px;
-	}
-
-	.main_nav_dropdown li a {
-		font-size: 16px;
-	}
-}
-
-@media screen and (max-width: 991px) {
-
-	.main_nav {
-		margin-top: 56px;
-	}
-
-	.cat_menu_container ul {
-		visibility: hidden;
-		opacity: 0;
-	}
-
-	.main_nav_menu {
-		display: none;
-	}
-
-	.menu_trigger_container {
-		display: block;
-	}
-}
-
-@media screen and (max-width: 767px) {
-
-	.main_nav {
-		margin-top: 0px;
-	}
-}
-
-@media screen and (max-width: 575px) {
-	.main_nav {
-		/* width: calc(100% + 30px); */
-		margin-left: -15px;
-		margin-right: -15px;
-		margin-top: 0px;
-	}
-
-	.cat_menu_container {
-		width: auto;
-		padding: 0 15px;
-	}
-
-	.cat_burger {
-		width: 16px;
-		height: 12px;
-	}
-
-	.cat_burger span:nth-child(2) {
-		top: 5px;
-	}
-
-	.cat_burger span:nth-child(3) {
-		top: 10px;
-	}
-
-	.cat_menu_text {
-		font-size: 13px;
-		margin-left: 12px;
-	}
-
-	.cat_menu li {
-		height: 36px;
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-
-	.cat_menu li a {
-		font-size: 13px;
-		line-height: 36px;
-	}
-
-	.cat_menu li ul {
-		left: 50%;
-		z-index: 10;
-	}
-
-	.menu_trigger_container {
-		padding-right: 15px;
-	}
-
-	.menu_trigger_text {
-		font-size: 13px;
-		margin-right: 10px;
-	}
-
-	.cat_burger {
-		width: 16px;
-		height: 12px;
-	}
-
-	.cat_burger span:nth-child(2) {
-		top: 5px;
-	}
-
-	.cat_burger span:nth-child(3) {
-		top: 10px;
-	}
+.faTiktok {
+  color: #111111;
+  
+  filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);
 }

@@ -55,7 +55,7 @@ function HeaderMain({ toggleCart }) {
 
                     <div className={"col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right"}>
                         <div className={styles.wishlist_cart + " d-flex flex-row align-items-center justify-content-end"}>
-                            <Link to={'/wishlist'} className={styles.wishlist + " d-flex flex-row align-items-center justify-content-end"}>
+                            <Link to={'/wishlist'} className={styles.wishlist + " d-flex flex-row align-items-center justify-content-end " + styles.navIcons}>
                                 <div className={styles.wishlist_icon}><img src="images/heart.png" alt="" /></div>
                                 <div className={styles.wishlist_content}>
                                     <div className={styles.wishlist_text}>Wishlist</div>
@@ -63,7 +63,7 @@ function HeaderMain({ toggleCart }) {
                                 </div>
                             </Link>
 
-                            <Link onClick={toggleCart} className={"cart"}>
+                            <Link onClick={toggleCart} className={styles.navIcons}>
                                 <div className={"cart_container d-flex flex-row align-items-center justify-content-end"}>
                                     <div className={styles.cart_icon}>
                                         <img src="images/cart.png" alt="" />

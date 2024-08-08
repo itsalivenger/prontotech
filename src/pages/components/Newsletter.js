@@ -27,7 +27,7 @@ function Newsletter() {
 								<div className={styles.newsletter_content +  " " + styles.clearfix}>
 									<form onSubmit={handleSubmit} className={styles.newsletter_form}>
 										<input type="email" onChange={e => setEmail(e.target.value)} value={email} className={styles.newsletter_input} required="required" placeholder="Enter your email address" />
-										<ProntoTechBtn onClick={() => setType('subscribe')} className={styles.newsletter_button} text={"Subscribe"} icon={'fa-envelope'} />
+										<ProntoTechBtn onClick={() => setType('subscribe')} className={styles.newsletter_button} text={"Subscribe"} icon={'fa-bell'} />
 									</form>
 									<div className={styles.newsletter_unsubscribe_link}><span onClick={() => {
 										setType('unsubscribe');
