@@ -65,18 +65,15 @@
     color: #a3a3a3 !important;
 }
 
-.header_search_input:-moz-placeholder
-
-/* older Firefox*/
-    {
+.header_search_input:-moz-placeholder {
     font-size: 16px !important;
     font-weight: 300;
     line-height: 50px;
     color: #a3a3a3 !important;
 }
 
-.navIcons{
-    color: #37b9d3 !important;
+.navIcons {
+    color: #e61476;
 }
 
 .header_search_input::-moz-placeholder
@@ -188,7 +185,7 @@
 .wishlist_text a {
     font-size: 18px;
     font-weight: 400;
-    color: #0a6bb1;
+    color: #e61476;
     -webkit-transition: all 200ms ease;
     -moz-transition: all 200ms ease;
     -ms-transition: all 200ms ease;
@@ -197,7 +194,7 @@
 }
 
 .wishlist_text a:hover {
-    color: #0e8ce4;
+    color: #a30951;
 }
 
 .wishlist_count {
@@ -216,7 +213,7 @@
     right: -14px;
     width: 23px;
     height: 23px;
-    background: #0e8ce4;
+    background: #e61476;
     border-radius: 50%;
     text-align: center;
 }

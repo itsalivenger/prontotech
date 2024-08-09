@@ -6,7 +6,7 @@ import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
 import Newsletter from './pages/components/Newsletter';
 import Home from './pages/Home';
-// import Cart from './pages/Cart';
+import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Contact from './pages/Contact';
@@ -33,7 +33,7 @@ function App() {
         <div className="webpageContainer container">
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* <Route path="/cart" element={<Cart />} /> */}
+            <Route path="/cart" element={<Cart />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             {/* Done */}

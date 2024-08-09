@@ -1,0 +1,29 @@
+.megaLink {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+  }
+  
+  .megaLink:hover {
+    background-color: #37b9d3;
+    color: white;
+  }
+  
+  .megaMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 10;
+    width: 150px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
