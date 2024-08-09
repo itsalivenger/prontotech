@@ -12,11 +12,11 @@
 
 .logo {
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
+    -webkit-transform: translate(-20%, -50%) scale(1.5);
+    -moz-transform: translate(-20%, -50%) scale(1.5);
+    -ms-transform: translate(-20%, -50%) scale(1.5);
+    -o-transform: translate(-20%, -50%) scale(1.5);
+    transform: translate(-20%, -50%) scale(1.5);
 }
 
 .logo a {
@@ -393,5 +393,12 @@
     .wishlist_text a,
     .cart_text a {
         font-size: 14px;
+    }
+    .logo {
+        -webkit-transform: scale(2.5) translate(10px ,-10px);
+        -moz-transform: scale(2.5) translate(10px ,-10px);
+        -ms-transform: scale(2.5) translate(10px ,-10px);
+        -o-transform: scale(2.5) translate(10px ,-10px);
+        transform: scale(2.5) translate(10px ,-10px);
     }
 }

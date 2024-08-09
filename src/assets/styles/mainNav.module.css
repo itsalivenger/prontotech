@@ -22,7 +22,7 @@
   font-size: 24px;
 }
 
-.sideNav{
+.sideNav {
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -88,13 +88,16 @@
   border-radius: 50%;
   color: #111;
 
-  i, svg {
+  i,
+  svg {
     transition: all 0.5s ease;
   }
 }
 
 .icon:hover {
-  i, svg {
+
+  i,
+  svg {
     transform: rotate(360deg);
   }
 }
@@ -115,7 +118,7 @@
   color: #ff0050;
 }
 
-.closeBtn{
+.closeBtn {
   display: none;
 }
 
@@ -142,7 +145,7 @@
     gap: 20px;
   }
 
-  .closeBtn{
+  .closeBtn {
     display: block;
   }
 
@@ -172,5 +175,28 @@
   .links,
   .icons {
     display: flex;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .mainNavBtnsContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .navBtns {
+    width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+    width: 80%;
+    justify-content: center;
   }
 }
