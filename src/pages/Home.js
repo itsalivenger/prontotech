@@ -1,4 +1,3 @@
-import Banner1 from './components/Banner1';
 import Characteristics from './components/Characteristics';
 import DealsFeatured from './components/DealsFeatured';
 
@@ -16,19 +15,19 @@ const banners = [
     { 
       image: './images/banner1.jpg', 
       title: 'Welcome to Our Store', 
-      subtitle: 'Best deals on electronics', 
+      subtitle: 'Find our best deals on electronics', 
       buttonText: 'Shop Now' 
     },
     { 
       image: './images/banner2.jpg', 
       title: 'Summer Collection', 
-      subtitle: 'Latest trends in fashion', 
+      subtitle: 'Emerge into our latest trends in fashion', 
       buttonText: 'Explore' 
     },
     { 
-      image: './images/banner2.jpg', 
+      image: './images/banner3.avif', 
       title: 'Tech Gadgets', 
-      subtitle: 'Innovative tech products', 
+      subtitle: 'Discover our Innovative tech products', 
       buttonText: 'Discover' 
     },
   ];
