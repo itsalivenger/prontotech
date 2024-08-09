@@ -25,7 +25,7 @@ const MainNav = () => {
           <li><Link to="/">Ordinateurs</Link></li>
           <li><Link to={"#deals"}>Telephones</Link></li>
           <li><Link to={'/blog'}>Composants</Link></li>
-          <li><Link to={'/about'}>Gamming</Link></li>
+          <li><Link to={'/about'}>Gaming</Link></li>
           <li><Link to={'/contact'}>Promotion</Link></li>
         </ul>
         <div className={styles.icons}>

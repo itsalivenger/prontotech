@@ -14,6 +14,7 @@ import SingleProduct from './pages/SingleProduct';
 import Checkout from './pages/checkout';
 import ProfilePage from './pages/ProfilePage';
 import Wishlist from './pages/Wishlist';
+// import BackgroundImg from './pages/components/backgroundImg';
 
 
 
@@ -31,6 +32,7 @@ function App() {
       <div className="App">
         <Navbar contactInfo={contactInfo} />
         <div className="webpageContainer container">
+          {/* <BackgroundImg url={"./"} /> */}
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/cart" element={<Cart />} />
