@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import styles from '../../assets/styles/dropdown.module.css';
 
 const Dropdown = ({ buttonLabel, children }) => {

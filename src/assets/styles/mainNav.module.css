@@ -14,13 +14,18 @@
 .logo {
   font-size: 22px;
   font-weight: 500;
-  /* Make the font weight lighter */
 }
 
 .hamburger {
   display: none;
   cursor: pointer;
   font-size: 24px;
+}
+
+.sideNav{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .links {
@@ -31,22 +36,21 @@
   transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
   overflow: hidden;
 }
+
+.links li {
+  transition: all .4s ease;
+}
+
 .links a {
   text-decoration: none;
-  color: #000;
-  font-size: 18px;
-  font-weight: 300;
-  /* Lighter font */
-  transition: color 0.3s ease;
-}
-
-.links a:hover, .links a:nth-child(1) {
   color: #e61476;
-  transform: translateY(2%);
+  font-size: 18px;
+  font-weight: 400;
 }
 
-.mainNavBtsContainer{
-  
+.links li:hover {
+  color: #ef4595;
+  transform: translateY(5px);
 }
 
 .navBtns {
@@ -59,25 +63,13 @@
   transition: background-color 0.3s ease;
 }
 
-.menuBtn{
+.menuBtn {
   background-color: #e61476;
 }
 
 .menuBtn:hover {
   background-color: #ff3f92;
 }
-
-.contactBtn{
- /* background-color: #37b9d3; */
- background-color: #d61369;
-}
-
-
-.contactBtn:hover{
-  /* background-color: #04788f; */
-  background-color: #ff3f92;
-}
-
 
 .icons {
   display: flex;
@@ -93,22 +85,18 @@
   width: 40px;
   height: 40px;
   border: 2px solid #d3d3d3;
-  /* Light gray border */
   border-radius: 50%;
-  /* Perfectly rounded */
-  color: #000;
-  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+  color: #111;
+
+  i, svg {
+    transition: all 0.5s ease;
+  }
 }
 
 .icon:hover {
-  color: #e61476;
-  background-color: #f0f0f0;
-  border-color: #e61476;
-}
-
-.fab {
-  font-size: 20px;
-  /* Adjust the icon size */
+  i, svg {
+    transform: rotate(360deg);
+  }
 }
 
 .facebook {
@@ -123,58 +111,66 @@
   color: pink;
 }
 
-.dribble {
-  color: deeppink;
-}
-
 .tiktok {
   color: #ff0050;
 }
 
-.faTiktok {
-  color: #111111;
-  filter: drop-shadow(2px 0px 0px #FD3E3E) drop-shadow(-2px -2px 0px #4DE8F4);
+.closeBtn{
+  display: none;
 }
-
 
 
 /* Responsive Styles */
 @media (max-width: 1000px) {
-  .links, .icons{
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    z-index: 10;
-    max-height: 0;
-    opacity: 0;
-  }
-
-  .links{
-    right: 196px;
-    width: 200px;
-  }
-  .icons {
-    right: 50px;
-    width: fit-content;
-  }
-
   .hamburger {
     display: block;
   }
-}
 
-@media screen and (max-width: 540px) {
-  
-}
+  .sideNav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
 
-/* Display and animate dropdowns on toggle */
-.show {
-  max-height: fit-content;
-  /* Enough height to fully show the items */
-  opacity: 1;
-}
+  .closeBtn{
+    display: block;
+  }
 
+  .sideNav .links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .sideNav .icons {
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .closeBtn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    align-self: flex-end;
+    cursor: pointer;
+    color: #e61476;
+  }
+
+  .show {
+    left: 0;
+  }
+
+  .links,
+  .icons {
+    display: flex;
+  }
+}
