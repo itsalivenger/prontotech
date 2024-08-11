@@ -105,13 +105,26 @@ const categories = [
 
 
 function Shop() {
+    const options = {
+    totalProducts : 35,
+    productsDisplayed : { start: 1, end: 27 },
+    sortOptions : [
+        { label: 'Tri par défaut', value: 'default' },
+        { label: 'Prix croissant', value: 'price-asc' },
+        { label: 'Prix décroissant', value: 'price-desc' }
+    ]
+    ,handleSortChange : (sortValue) => {
+        console.log('Selected sort:', sortValue);
+        // Handle sort change logic here
+    }};
+
     return (
         <div>
             <Breadcrumb items={["Home", <> Shop &nbsp; <i className='fa fa-store'></i></>]} />
             <SectionTitle title={`Shop ${''}`} />
             <div className={styles.shopContainer}>
                 <Categories categories={categories} subCategories={subCategories} priceRange={{ min: 0, max: 50000 }} />
-                <ProductList />
+                <ProductList options={options} />
             </div>
         </div>
     );

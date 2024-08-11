@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ProductFilter from './ProductFilter'
 import styles from '../../assets/styles/productList.module.css';
 import { Link } from 'react-router-dom';
 
@@ -45,10 +46,50 @@ const products = [
             './images/products/desktop1.png',
             './images/products/desktop.png',
         ],
+    },{
+        id: 3,
+        name: 'Lenovo Legion Pro 5 DQ12 i9 14th gen Trackball',
+        price: 1500,
+        originalPrice: 1390,
+        discount: '17%',
+        status: 'Neuf',
+        details: [
+            'Bureau Trackball 440 DPI Graphite',
+            'Droitier RF sans fil + Bluetooth 10 m',
+            'Type Scroll: Balle',
+            'Quantité de boutons programmables: 8',
+            'Rétro-éclairage : Non',
+            'Source d’alimentation: Piles',
+        ],
+        images: [
+            './images/products/desktop.png',
+            './images/products/desktop1.png',
+            './images/products/desktop.png',
+        ],
+    },{
+        id: 4,
+        name: 'Logitech MX Ergo souris sans fil avec Trackball',
+        price: 1149,
+        originalPrice: 1390,
+        discount: '17%',
+        status: 'Neuf',
+        details: [
+            'Bureau Trackball 440 DPI Graphite',
+            'Droitier RF sans fil + Bluetooth 10 m',
+            'Type Scroll: Balle',
+            'Quantité de boutons programmables: 8',
+            'Rétro-éclairage : Non',
+            'Source d’alimentation: Piles',
+        ],
+        images: [
+            './images/products/desktop.png',
+            './images/products/desktop1.png',
+            './images/products/desktop.png',
+        ],
     },
 ];
 
-const ProductList = () => {
+const ProductList = ({ options: { totalProducts, productsDisplayed, sortOptions, handleSortChange } }) => {
     const [hoveredProduct, setHoveredProduct] = useState(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -75,6 +116,10 @@ const ProductList = () => {
 
     return (
         <div className={styles.productList}>
+            <ProductFilter totalProducts={totalProducts}
+                productsDisplayed={productsDisplayed}
+                sortOptions={sortOptions}
+                onSortChange={handleSortChange} />
             {products.map(product => (
                 <Link
                     to={`/singleProduct/${product.id}`}

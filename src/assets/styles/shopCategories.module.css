@@ -6,8 +6,14 @@
     display: flex;
     flex-direction: column;
     gap: 3em;
-  }
+}
 
+/* Default hidden sidenav toggle button */
+.sidenavToggleButton {
+    display: none;
+}
+
+/* Category Section styles */
 .categorySection {
     margin-bottom: 20px;
 }
@@ -18,6 +24,7 @@
     border-bottom: 2px solid #e61476;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .categoryList {
@@ -48,7 +55,7 @@
     transition: all .5s;
 }
 
-.active{
+.active {
     max-height: 500px;
 }
 
@@ -94,8 +101,42 @@
     color: #333;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
+/* Responsive styles for screens smaller than 600px */
+@media (max-width: 600px) {
+    .categoriesContainer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        overflow-y: auto;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .sidenavOpen {
+        transform: translateX(0);
+    }
+
+    .sidenavToggleButton {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: #e61476;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .sidenavToggleButton:hover {
+        background-color: #37b9d3;
+    }
+
     .priceInputs {
         flex-direction: column;
     }

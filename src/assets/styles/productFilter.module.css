@@ -1,0 +1,66 @@
+.productFilterContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.productCount {
+    flex: 1;
+}
+
+.viewToggle {
+    display: flex;
+    margin-right: 10px;
+}
+
+.viewButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    margin-right: 8px;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.viewButton:hover,
+.viewButton.active {
+    color: #e61476; /* Highlight active or hovered button */
+}
+
+.sortDropdown {
+    flex: 1;
+    text-align: right;
+}
+
+.sortDropdown select {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .productFilterContainer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .viewToggle {
+        margin-top: 10px;
+    }
+
+    .sortDropdown {
+        margin-top: 10px;
+        width: 100%;
+        text-align: left;
+    }
+}
