@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../../assets/styles/bannerCarousel.module.css';
 
+
 const BannerCarousel = ({ banners }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 

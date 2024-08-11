@@ -3,8 +3,6 @@ import styles from '../assets/styles/product_preview.module.css';
 import SectionTitle from './components/SectionTitle'
 import TabComponent from './components/TabsContent';
 import Carousel from './components/Carousel';
-import ProductCard from './components/Productcard'
-import temp from '../assets/styles/temp'
 import ProntoTechBtn from './components/ProntoTechButton';
 import Breadcrumb from './components/BreadCrumb';
 
@@ -146,11 +144,7 @@ const ProductComponent = () => {
             </div>
             <SectionTitle title={"Informations Supplementaires"} />
             <TabComponent />
-            <Carousel>
-                {temp.map((product, index) => (
-                    <ProductCard key={index} product={product} />
-                ))}
-            </Carousel>
+            <Carousel />
         </div>
     );
 };

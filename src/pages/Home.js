@@ -35,7 +35,7 @@ function Home() {
     return (
         <div className="super_container">
             <BannerCarousel banners={banners} />
-            {/* <Banner1 /> */}
+            
             <Characteristics />
             <DealsFeatured />
             <PopularCategories />

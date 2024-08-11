@@ -8,10 +8,10 @@ function PopularCategories() {
 					<div className="popular_categories_content">
 						<div className="popular_categories_title">Popular Categories</div>
 						<div className="popular_categories_slider_nav">
-							<div className="popular_categories_prev popular_categories_nav"><i className="fas fa-angle-left ml-auto"></i></div>
-							<div className="popular_categories_next popular_categories_nav"><i className="fas fa-angle-right ml-auto"></i></div>
+							<div className="popular_categories_prev popular_categories_nav"><i className="fa fa-angle-left ml-auto"></i></div>
+							<div className="popular_categories_next popular_categories_nav"><i className="fa fa-angle-right ml-auto"></i></div>
 						</div>
-						<div className="popular_categories_link"><a href="#">full catalog</a></div>
+						<div className="popular_categories_link"><a href="#dedrmo">full catalog</a></div>
 					</div>
 				</div>
 				

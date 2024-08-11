@@ -11,10 +11,10 @@ import CouponComponent from "./components/CouponComponent";
 
 const lkrichat = [
     <p>Dashboard coming soon...</p>,
-    <p><OrderHistory /></p>,
+    <OrderHistory />,
     <AccountDetails />,
     <p>Active Orders coming soon...</p>,
-    <p><CouponComponent /></p>,
+    <CouponComponent />,
     <p>Disconnect coming soon...</p>]
 const ProfilePage = () => {
     const [activeItem, setActiveItem] = useState(null);

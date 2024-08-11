@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "../assets/styles/wishlist.module.css";
 import Breadcrumb from "./components/BreadCrumb";
 import SectionTitle from "./components/SectionTitle";
+import Carousel from "./components/Carousel";
 
 
 const wishlistData = [
@@ -69,7 +70,7 @@ const Wishlist = () => (
       You can quickly access your saved items, compare them, and decide what to 
       buy when you're ready. Plus, sharing your wishlist with friends and family
       makes gift-giving occasions more enjoyable and straightforward.</p>
-    {wishlistData.map((item, index) => (
+    {wishlistData.length ? wishlistData.map((item, index) => (
       <WishlistItem
         key={index}
         image={item.image}
@@ -79,7 +80,9 @@ const Wishlist = () => (
         stock={item.stock}
         description={item.description}
       />
-    ))}
+    )) : <h1>There are no items in the wishlist :(  </h1>}
+    <SectionTitle title={'Most Sold Items'} />
+    <Carousel />
   </div>
 );
 

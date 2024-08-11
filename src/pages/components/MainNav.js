@@ -22,11 +22,11 @@ const MainNav = () => {
       <div className={`${styles.sideNav} ${isMenuOpen ? styles.show : ''}`}>
         <button className={styles.closeBtn} onClick={toggleMenu}>×</button>
         <ul className={styles.links}>
-          <li><Link to="/">Ordinateurs</Link></li>
-          <li><Link to={"#deals"}>Telephones</Link></li>
-          <li><Link to={'/blog'}>Composants</Link></li>
-          <li><Link to={'/about'}>Gaming</Link></li>
-          <li><Link to={'/contact'}>Promotion</Link></li>
+          <li><Link to="/shop/pcs">Ordinateurs</Link></li>
+          <li><Link to={"/shop/laptops"}>Telephones</Link></li>
+          <li><Link to={'/shop/composantes'}>Composants</Link></li>
+          <li><Link to={'/shop/gaming'}>Gaming</Link></li>
+          <li><Link to={'/shop/promo'}>Promotion</Link></li>
         </ul>
         <div className={styles.icons}>
           <a href="#facebook" className={styles.icon}><i className={"fa fa-facebook-f " + styles.facebook}></i></a>

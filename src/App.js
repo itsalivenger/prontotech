@@ -14,6 +14,7 @@ import SingleProduct from './pages/SingleProduct';
 import Checkout from './pages/checkout';
 import ProfilePage from './pages/ProfilePage';
 import Wishlist from './pages/Wishlist';
+import Shop from './pages/Shop';
 // import BackgroundImg from './pages/components/backgroundImg';
 
 
@@ -39,12 +40,13 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             {/* Done */}
-            <Route path="/single-product" element={<SingleProduct />} />
+            <Route path="/singleProduct" element={<SingleProduct />} />
             <Route path="/contact" element={<Contact contactInfo={contactInfo} />} />
             {/*  */}
             <Route path='/checkout' element={<Checkout />} />
             <Route path='/profile' element={<ProfilePage />} />
             <Route path='/wishlist' element={<Wishlist />} />
+            <Route path='/shop' element={<Shop />} />
           </Routes>
         </div>
         <Newsletter />

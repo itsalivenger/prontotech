@@ -110,6 +110,11 @@
     margin-bottom: 10px;
   }
 
+  .itemImage{
+    margin: 10px auto;
+    transform: scale(1.4);
+  }
+
   .itemActions {
     flex-direction: column;
     width: 100%;

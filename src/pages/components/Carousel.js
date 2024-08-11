@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../../assets/styles/Carousel.module.css';
+import products from '../../assets/styles/temp';
+import ProductCard from './Productcard'
 
 const second = 1000;
-const Carousel = ({ children }) => {
+const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerSlide, setItemsPerSlide] = useState(4);
 
@@ -30,7 +32,7 @@ const Carousel = ({ children }) => {
     };
   }, []);
 
-  const totalSlides = Math.ceil(children.length / itemsPerSlide);
+  const totalSlides = Math.ceil(products.length / itemsPerSlide);
 
   const handlePrevClick = () => {
     setCurrentIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : totalSlides - 1));
@@ -45,9 +47,11 @@ const Carousel = ({ children }) => {
       <button className={`${styles.carouselBtn} ${styles.left}`} onClick={handlePrevClick}>&lt;</button>
       <div className={styles.carousel}>
         <div className={styles.carouselTrack} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {children.map((child, index) => (
+          {products.map((product, index) => (
             <div key={index} className={styles.carouselItem} style={{ flex: `0 0 ${100 / itemsPerSlide}%` }}>
-              {child}
+              {
+                <ProductCard product={product} key={index} />
+            }
             </div>
           ))}
         </div>
