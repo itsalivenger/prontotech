@@ -23,7 +23,7 @@ const Carousel = () => {
   useEffect(() => {
     updateItemsPerSlide();
     window.addEventListener('resize', updateItemsPerSlide);
-    const intervalId = setInterval(handleNextClick, second * 10000);
+    const intervalId = setInterval(handleNextClick, second * 3);
 
     // Cleanup interval on component unmount;
     return () => {

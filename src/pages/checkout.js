@@ -3,7 +3,7 @@ import styles from "../assets/styles/checkout.module.css";
 import api from "../services/api";
 import Breadcrumb from "./components/BreadCrumb";
 import SectionTitle from "./components/SectionTitle";
-import PopularCategories from "./components/PopularCategories";
+// import PopularCategories from "./components/PopularCategories";
 
 const Checkout = () => {
   const [form, setForm] = useState({
@@ -39,7 +39,7 @@ const Checkout = () => {
 
   return (
     <div>
-      <Breadcrumb items={["Home", "Checkout"]} />
+      <Breadcrumb items={["Home", "Cart", "Checkout"]} />
       <form onSubmit={handleSubmit} className={styles.form + " container"}>
         <div className={styles.leftColumn}>
           <div className={styles.billingDetails}>

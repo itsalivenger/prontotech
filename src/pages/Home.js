@@ -11,6 +11,7 @@ import Reviews from './components/Reviews'
 import Viewed from './components/Viewed'
 import Brands from './components/Brands'
 import BannerCarousel from './components/BannerCarousel';
+import Carousel from './components/Carousel';
 const banners = [
     { 
       image: './images/banner1.jpg', 
@@ -41,9 +42,10 @@ function Home() {
             <PopularCategories />
             <Banner2 />
             <NewArrivals />
-            <BestSellers />
-            <Adverts />
             <Trends />
+            <BestSellers />
+            <Carousel />
+            <Adverts />
             <Reviews />
             <Viewed />
             <Brands />

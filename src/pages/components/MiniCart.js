@@ -30,8 +30,8 @@ const MiniCart = ({ cartItems, isOpen, toggleCart }) => {
         </div>
         <div className={styles.cartFooter}>
           <p>Total: {getTotal()} DH</p>
-          <button className={styles.cartButtons + ' ' + styles.cartButton}>Go to Cart</button>
-          <button className={styles.cartButtons + ' ' + styles.wishlistButton}>Go to Wishlist</button>
+          <Link to={'/cart'}><button className={styles.cartButtons + ' ' + styles.cartButton}>Go to Cart</button></Link>
+          <Link to={'/wishlist'}><button className={styles.cartButtons + ' ' + styles.wishlistButton}>Go to Wishlist</button></Link>
         </div>
       </div>
     </>
