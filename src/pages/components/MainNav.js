@@ -2,17 +2,19 @@ import React, { useState } from 'react';
 import styles from '../../assets/styles/mainNav.module.css';
 import ProntoTechBtn from './ProntoTechButton';
 import { Link } from 'react-router-dom';
-// import MegaMenu from './MegaMenu';
+import Dropdown from './dropdown';
 
 const MainNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [toggled, setToggled] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
+  const toggleCategoriesMenu = () => setToggled(!toggled);
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <ProntoTechBtn text={"Categories"} icon={"fa-bars"} onClick={toggleMenu} />
+        <ProntoTechBtn text={"Categories"} icon={"fa-bars"} onClick={toggleCategoriesMenu} />
+        <Dropdown toggleCategoriesMenu={toggleCategoriesMenu} toggled={toggled} />
       </div>
       <div className={styles.mainNavBtnsContainer}>
         <div className={styles.hamburger} onClick={toggleMenu}>

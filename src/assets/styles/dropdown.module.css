@@ -1,31 +1,92 @@
 .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdownButton {
-    padding: 10px;
-    background-color: #37b9d3;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .dropdownButton:hover {
-    background-color: #2a93a8;
-  }
-  
-  .dropdownContent {
-    position: absolute;
-    top: 100%;
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  transition: all .5s ease;
+  background-color: #fff;
+}
+
+.toggle {
+  max-height: 400px;
+  overflow: visible;
+}
+
+.menuItem {
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.title {
+  padding: 15px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  color: #e61476;
+}
+
+.title:hover {
+  color: #ff51a2;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.submenu {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.active {
+  height: fit-content;
+  overflow: visible;
+  /* Adjust this based on your mega menu content */
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  display: none;
+  justify-content: right;
+  padding: 1em;
+}
+
+@media (max-width: 1000px) {
+  .dropdown {
+    position: fixed;
     left: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 10px;
+    top: 0;
+    width: 250px;
+    min-height: 100vh;
+    background-color: #fff;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
     z-index: 10;
-    width: 200px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
-  
+
+  .active {
+    height: 1050px;
+  }
+
+  .toggle {
+    left: 250px;
+  }
+
+  .menuItem {
+    border-bottom: 1px solid #fff;
+  }
+
+  .dropdown.active {
+    transform: translateX(0);
+  }
+  .closeButton{
+    display: flex;
+  }
+}
