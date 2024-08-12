@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "../../../assets/styles/header_main.module.css"
 import api from "../../../services/api";
 import { Link } from "react-router-dom";
-
+// api('cart', 'POST', { type: 'cart' });
 
 function HeaderMain({ toggleCart }) {
     const [searchProducts, setSearchProducts] = useState('');
@@ -10,10 +10,36 @@ function HeaderMain({ toggleCart }) {
     const [cartCount] = useState(0);
     const [cartTotal] = useState(0);
 
+    const [currentText, setCurrentText] = useState('');
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentSentence, setCurrentSentence] = useState(0)
+    const { text, delay, infinite } = {
+        text: ["Search for products...",
+            "Looking for something specific?...",
+            "Type a keyword..."],
+        delay: 100,
+        infinite: true
+    }
+
     useEffect(() => {
-        api('cart', 'POST', { type: 'cart' })
-    }, [])
-    
+        let timeout;
+
+        if (currentIndex <= text[currentSentence].length) {
+            timeout = setTimeout(() => {
+                setCurrentText(prevText => prevText + text[currentSentence][currentIndex]);
+                setCurrentIndex(prevIndex => prevIndex + 1);
+            }, delay);
+
+        } else if (infinite) { // ADD THIS CHECK
+            setCurrentSentence(prev => prev + 1 >= text.length ? 0 : prev + 1);
+            setCurrentIndex(0);
+            setCurrentText('');
+        }
+
+        return () => clearTimeout(timeout);
+    }, [currentIndex, delay, infinite, text]);
+
+
     function handleSearchSubmit() {
         api('search', 'POST', { type: 'search', searchProducts, searchCategory })
     }
@@ -32,7 +58,17 @@ function HeaderMain({ toggleCart }) {
                         <div className={styles.header_search}>
                             <div className={styles.header_search_content}>
                                 <div className={styles.header_search_form_container}>
-                                    <input type="text" className={styles.header_search_input} placeholder="Search for products..." value={searchProducts} onChange={(e) => setSearchProducts(e.target.value)} />
+                                    <input type="text"
+
+                                        onFocus={() => { }}
+                                        onBlur={() => {
+
+                                        }}
+                                        placeholder={currentText}
+
+
+
+                                        className={styles.header_search_input} value={searchProducts} onChange={(e) => setSearchProducts(e.target.value)} />
                                     <div className={"custom_dropdown"}>
                                         <div className={"custom_dropdown_list"}>
                                             <span className={"custom_dropdown_placeholder clc"}>All Categories</span>
@@ -70,7 +106,7 @@ function HeaderMain({ toggleCart }) {
                                         <div className={styles.cart_count}><span>{cartCount}</span></div>
                                     </div>
                                     <div className={styles.cart_content}>
-                                        <div  className={styles.cart_text}><span>Cart</span></div>
+                                        <div className={styles.cart_text}><span>Cart</span></div>
                                         <div className={styles.cart_price}>{cartTotal} DH</div>
                                     </div>
                                 </div>

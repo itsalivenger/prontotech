@@ -11,7 +11,7 @@
   margin: 0;
   margin-bottom: 20px;
   text-align: center;
-  color: #0e8ce4;
+  color: #e61476;
 }
 
 .loginInputs {
@@ -29,7 +29,7 @@
 .loginSubmitBtn {
   width: 100%;
   padding: 10px;
-  background-color: #0e8ce4;
+  background-color: #e61476;
   border: none;
   border-radius: 10px;
   color: white;
@@ -39,7 +39,7 @@
 }
 
 .loginSubmitBtn:hover {
-  background-color: #007bff;
+  background-color: #fd2e8f;
 }
 
 

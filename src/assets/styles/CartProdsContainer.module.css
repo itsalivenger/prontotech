@@ -76,7 +76,7 @@
     text-align: center;
 }
 
-.productPrice{
+.productPrice, .productSubtotal{
     color: #e61476;
 }
 

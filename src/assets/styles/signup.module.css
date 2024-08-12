@@ -18,7 +18,7 @@
 
 .signUpTitle {
     margin-bottom: 1rem;
-    color: #0e8ce4;
+    color: #e61476;
 }
 
 .input_box {
@@ -38,7 +38,7 @@
 }
 
 .submitBtn {
-    background-color: #0e8ce4;
+    background-color: #e61476;
     color: white;
     padding: 0.5rem 1rem;
     border: none;
@@ -50,7 +50,7 @@
 }
 
 .submitBtn:hover {
-    background-color: #007bff;
+    background-color: #ff50a1;
 }
 
 .linksContainer {
