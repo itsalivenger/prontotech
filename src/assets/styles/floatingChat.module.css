@@ -84,3 +84,9 @@
         transform: scaleY(1);
     }
 }
+
+@media (max-width: 768px) {
+    .container{
+        bottom: 80px;
+    }
+}

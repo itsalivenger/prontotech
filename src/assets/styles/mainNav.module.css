@@ -209,16 +209,12 @@
     padding: 0;
   }
 
-  .prontoBtn{
-    display: none;
-  }
-
   .phoneMenu{
     display: flex;
   }
   
-  .mainNavBtnsContainer {
-    display: none;
+  .mainNavBtnsContainer, .prontoBtn {
+    display: none !important;
   }
 
   .toggleMenu{

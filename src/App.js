@@ -22,6 +22,7 @@ import PasswordForgotten from './pages/PasswordForgotten';
 import FloatingChat from './pages/components/FloatingChat';
 import { useState } from 'react';
 import PrivateRoute from './components/common/routing/PrivateRoute';
+import AdminLogin from './pages/adminPages/AdminLogin';
 
 // import BackgroundImg from './pages/components/backgroundImg';
 
@@ -59,11 +60,14 @@ function App() {
             <Route path="/404" element={<NotFoundPage />} />
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/resetPassword" element={<PasswordForgotten />} />
+            <Route path='/adminLogin' element={<AdminLogin />} />
 
             {/* Protected Routes */}
             <Route path="/checkout" element={<PrivateRoute isAuthenticated={isAuthenticated} element={Checkout} />} />
             <Route path="/profile" element={<PrivateRoute isAuthenticated={isAuthenticated} element={ProfilePage} />} />
             <Route path="/wishlist" element={<PrivateRoute isAuthenticated={isAuthenticated} element={Wishlist} />} />
+
+            {/* Admin Pages */}
           </Routes>
         </div>
         <FloatingChat />
