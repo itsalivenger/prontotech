@@ -50,3 +50,9 @@
   color: #0e8ce4;
   text-decoration: none;
 }
+
+@media screen and (max-width: 400px) {
+  .loginContainer {
+    width: 100%;
+  }
+}

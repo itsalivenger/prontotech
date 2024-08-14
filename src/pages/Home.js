@@ -13,6 +13,7 @@ import Brands from './components/Brands'
 import BannerCarousel from './components/BannerCarousel';
 import Carousel from './components/Carousel';
 import ResponsiveImageBanner from './components/ResponsiveImageBanner';
+import GadgetCarousel from './components/GadgetCarousel';
 const banners = [
     { 
       image: './images/banner1.jpg', 
@@ -33,6 +34,33 @@ const banners = [
       buttonText: 'Discover' 
     },
   ];
+
+  const items = [
+    {
+      image: './images/popular_1.png',
+      title: 'Item 1'
+    },
+    {
+      image: './images/popular_2.png',
+      title: 'Item 2'
+    },
+    {
+      image: './images/popular_3.png',
+      title: 'Item 3'
+    },{
+      image: './images/popular_4.png',
+      title: 'Item 1'
+    },
+    {
+      image: './images/popular_5.png',
+      title: 'Item 2'
+    },
+    {
+      image: './images/popular_6.png',
+      title: 'Item 3'
+    },
+    // Add more items as needed
+  ];
 function Home() {
     return (
         <div className="super_container">
@@ -41,6 +69,7 @@ function Home() {
             <Characteristics />
             <DealsFeatured />
             <PopularCategories />
+            <GadgetCarousel items={items} />
             <Banner2 />
             <NewArrivals />
             <Trends />

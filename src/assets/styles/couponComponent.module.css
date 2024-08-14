@@ -3,7 +3,7 @@
     border-radius: 5px;
     max-width: 600px;
     margin: auto;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.712);
     text-align: center;
   }
   
@@ -25,7 +25,6 @@
 
   .input {
     padding: 0.5em;
-    border: none;
     border-radius: 5px;
   }
   

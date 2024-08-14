@@ -1,0 +1,25 @@
+.carousel {
+    position: relative;
+  }
+  
+  .carousel img {
+    width: 100%;
+  }
+  
+  .prev {
+    position: absolute;
+    left: 0;
+    top: 15rem;
+    z-index: 1;
+    background-color: white;
+    padding: 5px;
+  }
+  
+  .next {
+    position: absolute;
+    right: 0;
+    top: 15rem;
+    z-index: 1;
+    background-color: white;
+    padding: 5px;
+  }
