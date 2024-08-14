@@ -1,6 +1,6 @@
 .header_main {
     z-index: 0;
-    padding: 1em 0;
+    padding: 0;
 }
 
 .header.scrolled .header_main {
