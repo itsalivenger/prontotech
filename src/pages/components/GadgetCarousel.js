@@ -1,51 +1,79 @@
-import React, { useState } from "react";
-import "../../assets/styles/gadgetCarousel.module.css";
+import styles from "../../assets/styles/gadgetCarousel.module.css";
+import Slider from 'react-slick';
+import SectionTitle from "./SectionTitle";
+import { Link } from "react-router-dom";
 
-export default function GadgetCarousel() {
-  const [index, setIndex] = useState(0);
+const gadgetCarousel = () => {
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ],
+    prevArrow: <div>
+      <div className={styles.prevArrow}>&#10095;</div>
+    </div>,
+    nextArrow: <div>
+      <div className={styles.nextArrow}>&#10094;</div>
+    </div>
+  };
 
-  const carousels = [
-    "./images/popular_1.png",
-    "./images/popular_2.png",
-    "./images/popular_3.png"
+  const items = [
+    { icon: './images/popular_1.png', label: 'Smartphones & Tablets' },
+    { icon: './images/popular_2.png', label: 'Computers & Laptops' },
+    { icon: './images/popular_3.png', label: 'Gadgets' },
+    { icon: './images/popular_4.png', label: 'Video Games & Consoles' },
+    { icon: './images/popular_5.png', label: 'Accessories' }
   ];
 
-  const onNext = () => {
-    console.log(carousels.length);
-
-    if (index < carousels.length - 1) {
-      let i = index + 1;
-      setIndex(i);
-    } else {
-      setIndex(0);
-    }
-  };
-
-  const onPrev = () => {
-    if (index > 0 && index < carousels.length) {
-      let i = index - 1;
-      setIndex(i);
-    } else {
-      setIndex(carousels.length - 1);
-    }
-  };
-
   return (
-    <div className="carousel">
-      {carousels.map((item, i) =>
-        i === index ? (
-          <div className="carousel-item" key={i}>
-            <img src={item} alt={item} />
-          </div>
-        ) : null
-      )}
-
-      <a className="prev" onClick={onPrev}>
-        Prev
-      </a>
-      <a className="next" onClick={onNext}>
-        Next
-      </a>
+    <div className={styles.carouselContainer}>
+      <div className={styles.titleContainer}>
+        {/* <h2 className={styles.carouselTitle}>Popular Categories</h2> */}
+        <SectionTitle title={"Popular Categories"} />
+        <div className={styles.linkContainer}>
+          <Link to={'/catalog'}>View Full Catalog</Link>
+        </div>
+      </div>
+      <div className={styles.sliderContainer}>
+        <Slider {...settings}>
+          {items.map((item, index) => (
+            <IconCard title={item.label} icon={item.icon} lightBlueBg={(index % 2 ? false : true)} />
+          ))}
+        </Slider>
+      </div>
     </div>
   );
-}
+};
+
+
+const IconCard = ({ title, icon, lightBlueBg }) => {
+  return (
+    <div className={`${styles.card} ${lightBlueBg ? styles.lightBlue : styles.white}`}>
+      <div className={styles.iconWrapper}>
+        <img src={icon} alt={title} className={styles.icon} />
+      </div>
+      <h3 className={styles.title}>{title}</h3>
+    </div>
+  );
+};
+
+
+export default gadgetCarousel;

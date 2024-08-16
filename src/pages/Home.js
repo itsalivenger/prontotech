@@ -14,6 +14,8 @@ import BannerCarousel from './components/BannerCarousel';
 import Carousel from './components/Carousel';
 import ResponsiveImageBanner from './components/ResponsiveImageBanner';
 import GadgetCarousel from './components/GadgetCarousel';
+import Features from './components/Features';
+import A9wadCarousel from './components/A9wadCarousel';
 const banners = [
     { 
       image: './images/banner1.jpg', 
@@ -34,43 +36,18 @@ const banners = [
       buttonText: 'Discover' 
     },
   ];
-
-  const items = [
-    {
-      image: './images/popular_1.png',
-      title: 'Item 1'
-    },
-    {
-      image: './images/popular_2.png',
-      title: 'Item 2'
-    },
-    {
-      image: './images/popular_3.png',
-      title: 'Item 3'
-    },{
-      image: './images/popular_4.png',
-      title: 'Item 1'
-    },
-    {
-      image: './images/popular_5.png',
-      title: 'Item 2'
-    },
-    {
-      image: './images/popular_6.png',
-      title: 'Item 3'
-    },
-    // Add more items as needed
-  ];
 function Home() {
     return (
         <div className="super_container">
             <BannerCarousel banners={banners} />
             
-            <Characteristics />
+            {/* <Characteristics /> */}
+            <Features />
             <DealsFeatured />
-            <PopularCategories />
-            <GadgetCarousel items={items} />
-            <Banner2 />
+            {/* <PopularCategories /> */}
+            <GadgetCarousel />
+            {/* <Banner2 /> */}
+            <A9wadCarousel />
             <NewArrivals />
             <Trends />
             <ResponsiveImageBanner src={"./images/banner2.jpg"} alt={"banner"} />

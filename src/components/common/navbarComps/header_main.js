@@ -50,7 +50,7 @@ function HeaderMain({ toggleCart }) {
 
                     <div className={"col-lg-2 col-sm-3 col-3 order-1"}>
                         <div className={styles.logo_container}>
-                            <div className={styles.logo}><a href="gegl"><img alt="Logo" className="img img-fluid" src={'./images/prontoLogo.png'} /></a></div>
+                            <div className={styles.logo}><Link to={'/'}><img alt="Logo" className="img img-fluid" src={'./images/prontoLogo.png'} /></Link></div>
                         </div>
                     </div>
 

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import api from "../../services/api";
-import { Link } from "react-router-dom";
 import TopBar from "./navbarComps/top_bar";
 import HeaderMain from "./navbarComps/header_main";
 import MiniCart from '../../pages/components/MiniCart';

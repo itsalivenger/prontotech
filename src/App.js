@@ -29,8 +29,8 @@ import AdminLogin from './pages/adminPages/AdminLogin';
 
 
 function App() {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  // const [isAuthenticatedAdmin, setIsAuthenticatedAdmin] = useState(false);
   const contactInfo = {
     contactEmail: 'exemple@gmail.com',
     contactPhone: '+212 776 41 25 46',
@@ -70,7 +70,7 @@ function App() {
             {/* Admin Pages */}
           </Routes>
         </div>
-        <FloatingChat />
+        {/* <FloatingChat /> */}
         <Newsletter />
         <Footer contactInfo={contactInfo} />
       </div>

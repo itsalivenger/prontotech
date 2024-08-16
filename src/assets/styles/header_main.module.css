@@ -13,11 +13,11 @@
 
 .logo {
     top: 50%;
-    -webkit-transform: translate(-20%, -50%) scale(1.5);
-    -moz-transform: translate(-20%, -50%) scale(1.5);
-    -ms-transform: translate(-20%, -50%) scale(1.5);
-    -o-transform: translate(-20%, -50%) scale(1.5);
-    transform: translate(-20%, -50%) scale(1.5);
+    -webkit-transform: translate(-20%, -58%) scale(1.5);
+    -moz-transform: translate(-20%, -58%) scale(1.5);
+    -ms-transform: translate(-20%, -58%) scale(1.5);
+    -o-transform: translate(-20%, -58%) scale(1.5);
+    transform: translate(-20%, -58%) scale(1.5);
 }
 
 .logo a {
@@ -57,6 +57,7 @@
     padding-left: 26px;
     color: #7f7f7f;
     float: left;
+    border-radius: 5px;
 }
 
 .header_search_input::-webkit-input-placeholder {

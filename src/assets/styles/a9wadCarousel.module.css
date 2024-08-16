@@ -1,0 +1,149 @@
+.carouselContainer {
+    width: 100%;
+}
+
+.slide {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #37b9d30c;
+    padding: 3em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.productInfo {
+    max-width: 30%;
+}
+
+.category {
+    color: #888;
+    font-size: 14px;
+}
+
+.title {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.description {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.customDot {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.508);
+    position: relative;
+    top: -100px;
+    left: 100px;
+    margin: 5px;
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.active{
+    background-color: #e61476;
+}
+
+.currentSlide {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.currentSlide {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.rating {
+    color: #ffcc00;
+    /* Yellow color for stars */
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.exploreButton {
+    background-color: #e61476;
+    /* Blue button */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.exploreButton:hover {
+    background-color: #ff5faa;
+    /* Darker blue on hover */
+}
+
+.productImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.abstractBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f0f4ff 50%, transparent 50%), 
+                linear-gradient(225deg, #cce4ff 50%, transparent 50%);
+}
+
+.abstractBackground::before {
+    content: "";
+    position: absolute;
+    bottom: -50px; /* Adjust as needed */
+    right: -50px;  /* Adjust as needed */
+    width: 300px;
+    height: 300px;
+    background-color: #cce4ff;
+    clip-path: polygon(0 0, 100% 25%, 75% 100%, 0% 75%);
+    transform: rotate(20deg);
+    z-index: -2;
+}
+
+.abstractBackground::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: -3;
+}
+
+
+@media (max-width: 768px) {
+    .slide {
+        flex-direction: column;
+    }
+
+    .productInfo {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .productImage {
+        margin-top: 20px;
+        text-align: center;
+    }
+}

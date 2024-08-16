@@ -2,13 +2,12 @@
     display: flex;
     flex-direction: column;
     align-items:first baseline;
-    padding: 2em;
+    padding: 1em;
 }
 
 .title{
     font-weight: 400;
     margin: 0;
-    padding-bottom: 10px;
 }
 
 .underline{
