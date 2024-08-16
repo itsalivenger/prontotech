@@ -1,21 +1,21 @@
-import Characteristics from './components/Characteristics';
+// import Characteristics from './components/Characteristics';
 import DealsFeatured from './components/DealsFeatured';
 
-import PopularCategories from './components/PopularCategories';
-import Banner2 from './components/Banner2';
+// import PopularCategories from './components/PopularCategories';
+// import Banner2 from './components/Banner2';
 import NewArrivals from './components/NewArrivals';
 import BestSellers from './components/BestSellers';
 import Adverts from './components/Adverts'
-import Trends from './components/Trends'
-import Reviews from './components/Reviews'
-import Viewed from './components/Viewed'
-import Brands from './components/Brands'
+import TrendsCarousel from './components/TrendsCarousel'
+import Reviews from './components/ReviewsCarousel'
+import BrandCarousel from './components/BrandCarousel'
 import BannerCarousel from './components/BannerCarousel';
 import Carousel from './components/Carousel';
 import ResponsiveImageBanner from './components/ResponsiveImageBanner';
 import GadgetCarousel from './components/GadgetCarousel';
 import Features from './components/Features';
 import A9wadCarousel from './components/A9wadCarousel';
+import RecentlyViewedCarousel from './components/RecentlyViewedCarousel';
 const banners = [
     { 
       image: './images/banner1.jpg', 
@@ -49,14 +49,14 @@ function Home() {
             {/* <Banner2 /> */}
             <A9wadCarousel />
             <NewArrivals />
-            <Trends />
+            <TrendsCarousel />
             <ResponsiveImageBanner src={"./images/banner2.jpg"} alt={"banner"} />
-            <BestSellers />
+            {/* <BestSellers /> */}
             <Carousel />
             <Adverts />
             <Reviews />
-            <Viewed />
-            <Brands />
+            <RecentlyViewedCarousel />
+            <BrandCarousel />
         </div>
     );
 }

@@ -1,3 +1,7 @@
+.newArrivalsContainer{
+    padding: 2em 0;
+}
+
 .tabsContainer {
     width: 100%;
     display: flex;

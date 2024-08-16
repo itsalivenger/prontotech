@@ -1,0 +1,60 @@
+.brandsContainer{
+    padding: 2em 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.carousel {
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 3em 0; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.942);
+    background-color: #fff;
+  }
+  
+  .imageWrapper {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image {
+    max-width: 100px;
+    height: auto;
+    /* filter: grayscale(100%); Apply grayscale filter */
+    opacity: 0.5; /* Apply opacity to match the style */
+    transition: all 0.3s ease;
+  }
+  
+  .imageWrapper:hover .image {
+    filter: none;
+    opacity: 1; /* Restore color and opacity on hover */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1200px) {
+    .image {
+      max-width: 80px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .image {
+      max-width: 70px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .image {
+      max-width: 60px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .image {
+      max-width: 50px;
+    }
+  }
+  

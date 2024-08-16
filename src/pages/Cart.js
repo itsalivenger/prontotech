@@ -2,9 +2,8 @@
 // import '../assets/styles/cart_responsive.css';
 import { useEffect, useState } from 'react';
 import api from '../services/api';
-import Trends from './components/Trends';
-import Reviews from './components/Reviews';
-import { Link } from 'react-router-dom';
+import TrendsCarousel from './components/TrendsCarousel';
+import Reviews from './components/ReviewsCarousel';
 import CartProdsContainer from './components/CartelProdsContainer';
 import SectionTitle from './components/SectionTitle';
 import Breadcrumb from './components/BreadCrumb';
@@ -58,7 +57,7 @@ function Cart() {
           <CartProdsContainer initialProducts={initialProducts} />
           <CartTotals handleClear={clearCart} />
         </div>
-        <Trends />
+        <TrendsCarousel />
 
         <Reviews />
       </div>

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from '../../assets/styles/tabsContent.module.css';
 import ProductDetails from './ProductDetails';
-import Reviews from './Reviews';
+import Reviews from './ReviewsCarousel';
 import ReviewComponent from './ProductReviews';
 import ProductOverview from './ProductOverview';
 import SectionTitle from './SectionTitle';
