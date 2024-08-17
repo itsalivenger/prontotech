@@ -96,22 +96,24 @@
 
 .logoContainer {
     flex-shrink: 0;
+    width: 160px;
+    overflow: hidden;
 }
 
 .logo {
-    height: 50px;
+    height: 60px;
+    transform: scale(2.6) translate(19px, -2px);
 }
 
 .searchContainer {
-    flex-grow: 1;
     margin: 0;
+    width: 50%;
     min-width: 250px;
 }
 
 .floatingImagesContainer {
     display: flex;
     gap: 10px;
-    margin-left: auto;
 }
 
 .floatingImage {

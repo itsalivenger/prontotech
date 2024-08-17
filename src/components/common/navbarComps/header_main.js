@@ -9,35 +9,37 @@ const HeaderMain = () => {
     return (
         <nav className={styles.navbar}>
             <div className={styles.logoContainer}>
-                <img 
-                    src="https://via.placeholder.com/100x50" 
-                    alt="Logo" 
-                    className={styles.logo} 
-                />
+                <Link to={"/"}>
+                    <img
+                        src="./images/logos/prontoLogo.png"
+                        alt="Logo"
+                        className={styles.logo}
+                    />
+                </Link>
             </div>
             <div className={styles.searchContainer}>
                 <SearchBar />
             </div>
             <div className={styles.floatingImagesContainer}>
-                <img 
-                    src="https://via.placeholder.com/50x50" 
-                    alt="Floating 1" 
-                    className={styles.floatingImage} 
+                <img
+                    src="https://via.placeholder.com/50x50"
+                    alt="Floating 1"
+                    className={styles.floatingImage}
                 />
-                <img 
-                    src="https://via.placeholder.com/50x50" 
-                    alt="Floating 2" 
-                    className={styles.floatingImage} 
+                <img
+                    src="https://via.placeholder.com/50x50"
+                    alt="Floating 2"
+                    className={styles.floatingImage}
                 />
-                <img 
-                    src="https://via.placeholder.com/50x50" 
-                    alt="Floating 2" 
-                    className={styles.floatingImage} 
+                <img
+                    src="https://via.placeholder.com/50x50"
+                    alt="Floating 2"
+                    className={styles.floatingImage}
                 />
-                <img 
-                    src="https://via.placeholder.com/50x50" 
-                    alt="Floating 2" 
-                    className={styles.floatingImage} 
+                <img
+                    src="https://via.placeholder.com/50x50"
+                    alt="Floating 2"
+                    className={styles.floatingImage}
                 />
             </div>
         </nav>
