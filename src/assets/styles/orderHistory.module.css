@@ -1,9 +1,24 @@
+/* ActiveOrders.module.css */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 .productTableContainer {
   max-width: 100%;
   margin: auto;
   padding: 20px;
   background: #fff;
   border: 1px solid #ddd;
+  animation: fadeInUp 0.5s ease-out;
   border-radius: 5px;
 }
 
@@ -43,7 +58,8 @@
 .productTable {
   width: 100%;
   border-collapse: collapse;
-  min-width: 600px; /* Ensures the table does not become too narrow */
+  min-width: 600px;
+  /* Ensures the table does not become too narrow */
 }
 
 .productTable th,
@@ -51,10 +67,14 @@
   border: 1px solid #ddd;
   padding: 10px;
   text-align: left;
-  word-wrap: break-word; /* Ensures long words break and wrap to the next line */
-  white-space: nowrap; /* Prevents table cells from wrapping text */
-  overflow: hidden; /* Hides overflow content */
-  text-overflow: ellipsis; /* Adds ellipsis for overflowing content */
+  word-wrap: break-word;
+  /* Ensures long words break and wrap to the next line */
+  white-space: nowrap;
+  /* Prevents table cells from wrapping text */
+  overflow: hidden;
+  /* Hides overflow content */
+  text-overflow: ellipsis;
+  /* Adds ellipsis for overflowing content */
 }
 
 .productTable th {
@@ -87,13 +107,15 @@
     margin-bottom: 10px;
   }
 
-  .filterControls button, .filterControls input {
+  .filterControls button,
+  .filterControls input {
     width: 100%;
     padding: 10px;
     font-size: 16px;
   }
 
-  .productTable th, .productTable td {
+  .productTable th,
+  .productTable td {
     padding: 5px;
   }
 }
@@ -103,12 +125,14 @@
     gap: 8px;
   }
 
-  .filterControls button, .filterControls input {
+  .filterControls button,
+  .filterControls input {
     padding: 8px;
     font-size: 14px;
   }
 
-  .productTable th, .productTable td {
+  .productTable th,
+  .productTable td {
     padding: 4px;
   }
 }

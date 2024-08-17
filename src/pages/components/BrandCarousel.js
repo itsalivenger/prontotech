@@ -8,7 +8,7 @@ const BrandCarousel = () => {
     infinite: true,
     speed: 500,
     slidesToShow: 6,
-    slidesToScroll: 1,
+    slidesToScroll: 5,
     prevArrow: <></>,
     nextArrow: <></>,
     responsive: [
@@ -44,6 +44,7 @@ const BrandCarousel = () => {
 
   const brands = [
     "./images/logos/apple.svg",
+    "./images/logos/sandisk.png",
     "./images/logos/samsung.svg",
     "./images/logos/lenovo.svg",
     "./images/logos/nvidia.svg",
@@ -51,6 +52,12 @@ const BrandCarousel = () => {
     "./images/logos/amd.svg",
     "./images/logos/dell.svg",
     "./images/logos/hp.svg",
+    "./images/logos/asus.svg",
+    "./images/logos/sony.svg",
+    "./images/logos/canon.png",
+    "./images/logos/tp-link.png",
+    "./images/logos/d-link.png",
+    "./images/logos/msi.png",
   ];
 
   return (

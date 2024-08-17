@@ -7,13 +7,18 @@ import ContentComponent from "./components/ProfileContent";
 import AccountDetails from "./components/AccountDetails";
 import OrderHistory from "./components/OrderHistory";
 import CouponComponent from "./components/CouponComponent";
+import ProfileDashboard from "./components/ProfileDashboard";
+import ActiveOrders from "./components/ActiveOrders";
 
 
 const lkrichat = [
-    <p>Dashboard coming soon...</p>,
+    <ProfileDashboard 
+    user={{name: 'Laarbi', lastLogin: '2024-08-01 11:11:11', profileImage: "https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50?s=200&d=mp&r=g"}}
+    orders={[1, 2]} 
+    wishlist={[1, 2]}/>,
     <OrderHistory />,
     <AccountDetails />,
-    <p>Active Orders coming soon...</p>,
+    <ActiveOrders />,
     <CouponComponent />,
     <p>Disconnect coming soon...</p>]
 const ProfilePage = () => {

@@ -9,6 +9,16 @@
   padding: 20px;
 }
 
+.selectField{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.selectField option{
+  padding: 0 1em;
+}
+
 .logoSection {
   text-align: center;
   margin-bottom: 30px;
@@ -77,26 +87,6 @@
 
 .loginButton:hover {
   background-color: #2da8c4;
-}
-
-.forgotPassword {
-  display: block;
-  margin-top: 10px;
-  color: #e61476;
-  text-align: center;
-  text-decoration: none;
-}
-
-.forgotPassword:hover {
-  text-decoration: underline;
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 358px) {
-  .forgotPassword {
-    font-size: 0.9em;
-    word-wrap: break-word;
-  }
 }
 
 @media (min-width: 768px) {

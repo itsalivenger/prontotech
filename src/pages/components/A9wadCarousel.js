@@ -30,28 +30,28 @@ const A9wadCarousel = () => {
             title: "MacBook Air 13",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.",
             rating: 4,
-            image: './images/banner_2_product.png', // Replace with the actual image path
+            image: './images/banner_2_product.webp', // Replace with the actual image path
         }, {
             id: 1,
             category: "Laptops",
             title: "MacBook Air 13",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.",
             rating: 4,
-            image: './images/banner_2_product.png', // Replace with the actual image path
+            image: './images/banner_2_product.webp', // Replace with the actual image path
         }, {
             id: 1,
             category: "Laptops",
             title: "MacBook Air 13",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.",
             rating: 4,
-            image: './images/banner_2_product.png', // Replace with the actual image path
+            image: './images/banner_2_product.webp', // Replace with the actual image path
         }, {
             id: 1,
             category: "Laptops",
             title: "MacBook Air 13",
             description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum laoreet.",
             rating: 4,
-            image: './images/banner_2_product.png', // Replace with the actual image path
+            image: './images/banner_2_product.webp', // Replace with the actual image path
         },
         // You can add more products here
     ];

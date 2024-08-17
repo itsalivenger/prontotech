@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styles from '../../assets/styles/deals_featured.module.css';
 import { Link } from 'react-router-dom';
 import CountdownTimer from './Countdown';
+import SectionTitle from './SectionTitle';
 
 const products = {
   featured: [
@@ -55,6 +56,7 @@ const ProductSlider = () => {
 
   return (
     <div className={styles.productSlider}>
+      <SectionTitle title={'Deals Of The Week'} />
       <div className={styles.leftSide}>
         <div className={styles.dealOfTheWeek}>
           <img src="images/products/desktop.png" alt="Deal of the Week" />

@@ -3,8 +3,12 @@ import { useState } from 'react';
 
 const AdminLogin = () => {
     const [showPassword, setShowPassword] = useState(false);
+    const [website, setWebsite] = useState();
+    const [userName, setUserName] = useState();
+
 
     const togglePasswordVisibility = () => {
+        console.log(website);
         setShowPassword(!showPassword);
     };
 
@@ -18,7 +22,13 @@ const AdminLogin = () => {
                 <h2>Welcome To Admin</h2>
                 <p>Please login to Admin Dashboard.</p>
                 <form className={styles.form}>
-                    <input type="text" placeholder="Username" className={styles.inputField} />
+                    <select onChange={(e) => setWebsite(e.target.value)} value={website} className={styles.selectField}>
+                        <option>Select Website</option>
+                        <option value={'ProntoTech'}>ProntoTech</option>
+                        <option value={'Vicky'}>Vicky</option>
+                        <option value={'Recyclage'}>Recyclage</option>
+                    </select>
+                    <input type="text" value={userName} onChange={(e)=> setUserName(e.target.value)} placeholder="Username" className={styles.inputField} />
                     <div className={styles.passwordContainer}>
                         <input
                             type={showPassword ? "text" : "password"}
@@ -54,7 +64,6 @@ const AdminLogin = () => {
                     </div>
                     <button className={styles.loginButton}>Login</button>
                 </form>
-                <a href="#" className={styles.forgotPassword}>Forgotten Your Password?</a>
             </div>
         </div>
     );
