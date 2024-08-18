@@ -3,6 +3,7 @@ import styles from '../../assets/styles/mainNav.module.css';
 import ProntoTechBtn from './ProntoTechButton';
 import { Link } from 'react-router-dom';
 import Dropdown from './dropdown';
+import BackgroundToggler from './BackgroundToggler';
 
 const MainNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,10 +16,12 @@ const MainNav = () => {
       <div className={styles.logo}>
         <ProntoTechBtn className={styles.prontoBtn} text={"Categories"} icon={"fa-bars"} onClick={toggleCategoriesMenu} />
         <Dropdown toggleCategoriesMenu={toggleCategoriesMenu} toggled={toggled} />
+        <BackgroundToggler toggle={toggleCategoriesMenu} toggled={toggled} />
       </div>
       <div className={styles.mainNavBtnsContainer}>
         <div className={styles.hamburger} onClick={toggleMenu}>
           <button className={styles.navBtns + " " + styles.menuBtn}>Menu &nbsp;<i className="fa fa-bars"></i></button>
+          <BackgroundToggler toggle={toggleMenu} toggled={isMenuOpen} />
         </div>
       </div>
       <div className={`${styles.sideNav} ${isMenuOpen ? styles.show : ''}`}>

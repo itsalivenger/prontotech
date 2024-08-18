@@ -15,12 +15,17 @@
 .dropdownToggle {
     background-color: transparent;
     border: none;
-    padding: 10px;
+    border-right: 1px solid #00aeee;
+    padding: 1em;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 400;
     display: flex;
     align-items: center;
     font-size: small;
+}
+
+.floatingImagesContainer div{
+    cursor: pointer;
 }
 
 .arrowDown {
@@ -42,6 +47,7 @@
     z-index: 1;
     max-height: 0;
     overflow: hidden;
+    width: fit-content;
     transition: max-height .3s ease;
 }
 
@@ -50,8 +56,13 @@
 }
 
 .dropdownItem {
-    padding: 10px;
+    padding: 10px 20px;
+    outline: none;
     cursor: pointer;
+}
+
+.dropdownToggle:focus-visible{
+    outline: none;
 }
 
 .dropdownItem:hover {
@@ -85,13 +96,14 @@
 .navbar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 1em;
     padding: 10px 20px;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
     flex-wrap: nowrap; /* No wrapping by default */
+    z-index: -2;
 }
 
 .logoContainer {
@@ -105,6 +117,10 @@
     transform: scale(2.6) translate(19px, -2px);
 }
 
+.bars{
+    display: none;
+}
+
 .searchContainer {
     margin: 0;
     width: 50%;
@@ -113,18 +129,43 @@
 
 .floatingImagesContainer {
     display: flex;
-    gap: 10px;
+    position: pointer;
+    gap: 20px;
+}
+
+.iconCount{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #e61476;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .floatingImage {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     transition: transform 0.3s ease;
 }
 
 .floatingImage:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 420px){
+    .bars{
+        display: block;
+    }
+    .selectedOption{
+        display: none;
+    }
 }
 
 /* Responsive Styles for Small Devices */

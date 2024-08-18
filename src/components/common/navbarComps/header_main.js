@@ -5,7 +5,46 @@ import { Link } from "react-router-dom";
 // api('cart', 'POST', { type: 'cart' });
 
 
-const HeaderMain = () => {
+const HeaderMain = ({ toggleCart }) => {
+    const [searchProducts, setSearchProducts] = useState('');
+    const [searchCategory, setSearchCategory] = useState('All Categories');
+    const [cartCount] = useState(0);
+    // const [cartTotal] = useState(0);
+    const [WishlistCount] = useState(0);
+
+    const [currentText, setCurrentText] = useState('');
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentSentence, setCurrentSentence] = useState(0)
+    const { text, delay, infinite } = {
+        text: ["Search for products...",
+            "Looking for something specific?...",
+            "Type a keyword..."],
+        delay: 100,
+        infinite: true
+    }
+
+    useEffect(() => {
+        let timeout;
+
+        if (currentIndex <= text[currentSentence].length) {
+            timeout = setTimeout(() => {
+                setCurrentText(prevText => prevText + text[currentSentence][currentIndex]);
+                setCurrentIndex(prevIndex => prevIndex + 1);
+            }, delay);
+
+        } else if (infinite) {
+            setCurrentSentence(prev => prev + 1 >= text.length ? 0 : prev + 1);
+            setCurrentIndex(0);
+            setCurrentText('');
+        }
+
+        return () => clearTimeout(timeout);
+    }, [currentIndex, delay, infinite, text]);
+
+
+    function handleSearchSubmit() {
+        api('search', 'POST', { type: 'search', searchProducts, searchCategory })
+    }
     return (
         <nav className={styles.navbar}>
             <div className={styles.logoContainer}>
@@ -18,29 +57,46 @@ const HeaderMain = () => {
                 </Link>
             </div>
             <div className={styles.searchContainer}>
-                <SearchBar />
+                <SearchBar currentText={currentText} handleSearchSubmit={handleSearchSubmit} />
             </div>
             <div className={styles.floatingImagesContainer}>
-                <img
-                    src="https://via.placeholder.com/50x50"
-                    alt="Floating 1"
-                    className={styles.floatingImage}
-                />
-                <img
-                    src="https://via.placeholder.com/50x50"
-                    alt="Floating 2"
-                    className={styles.floatingImage}
-                />
-                <img
-                    src="https://via.placeholder.com/50x50"
-                    alt="Floating 2"
-                    className={styles.floatingImage}
-                />
-                <img
-                    src="https://via.placeholder.com/50x50"
-                    alt="Floating 2"
-                    className={styles.floatingImage}
-                />
+                <div onClick={toggleCart}>
+                    <img
+                        src="./images/icons/cart_new.png"
+                        alt="Floating 1"
+                        className={styles.floatingImage}
+                    />
+                    <span className={styles.iconCount + ' text'}>{cartCount}</span>
+                </div>
+                <div>
+                    <Link to={'/wishlist'}>
+                        <img
+                            src="./images/icons/heart_new.png"
+                            alt="Floating 2"
+                            className={styles.floatingImage}
+                        />
+                        <span className={styles.iconCount}>{WishlistCount}</span>
+                    </Link>
+                </div>
+                <div>
+                    <Link to={'/compare'}>
+                        <img
+                            src="./images/icons/compare_new.png"
+                            alt="Floating 2"
+                            className={styles.floatingImage}
+                        />
+                        <span className={styles.iconCount}>0</span>
+                    </Link>
+                </div>
+                <div>
+                    <Link to={'/profile'}>
+                        <img
+                            src="./images/icons/user_new.png"
+                            alt="Floating 2"
+                            className={styles.floatingImage}
+                        />
+                    </Link>
+                </div>
             </div>
         </nav>
     );
@@ -48,7 +104,7 @@ const HeaderMain = () => {
 
 
 
-const SearchBar = () => {
+const SearchBar = ({ currentText, handleSearchSubmit }) => {
     const [selectedOption, setSelectedOption] = useState('Categories');
     const [isOpen, setIsOpen] = useState(false);
 
@@ -65,7 +121,13 @@ const SearchBar = () => {
         <div className={styles.searchBar}>
             <div className={styles.dropdown}>
                 <button className={styles.dropdownToggle} onClick={toggleDropdown}>
-                    {selectedOption} <span className={styles.arrowDown}>▼</span>
+                    <span className={styles.selectedOption}>
+                        <span>{selectedOption}</span>
+                        <span className={styles.arrowDown + ' fa fa-chevron-down'}></span>
+                    </span>
+                    <span className={styles.bars}>
+                        <span className={'fa fa-bars'}></span>
+                    </span>
                 </button>
                 <ul className={styles.dropdownMenu + ' ' + (isOpen ? styles.toggleDropdown : '')}>
                     {options.map((option, index) => (
@@ -81,7 +143,7 @@ const SearchBar = () => {
             </div>
             <input
                 type="text"
-                placeholder="Chercher un produit"
+                placeholder={currentText}
                 className={styles.searchInput}
             />
             <button className={styles.searchButton}>

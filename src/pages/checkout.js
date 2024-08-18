@@ -192,7 +192,7 @@ const Checkout = () => {
               </div>
             </div>
             <div className={styles.orderItem}>
-              <span>Cheque Payment</span>
+              <span>Cash On Delivery</span>
               <div className={styles.additionalInfo}>
                 {/* Your content here */}
                 <p>Additional information about the payment method.</p>

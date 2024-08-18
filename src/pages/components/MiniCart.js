@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../../assets/styles/miniCart.module.css';
 import { Link } from 'react-router-dom';
+import BackgroundToggler from './BackgroundToggler';
 
 const MiniCart = ({ cartItems, isOpen, toggleCart }) => {
 
@@ -11,6 +12,7 @@ const MiniCart = ({ cartItems, isOpen, toggleCart }) => {
 
   return (
     <>
+      <BackgroundToggler toggle={toggleCart} toggled={isOpen} />
       {/* <span className={styles.cartIcon + ' fa fa-shopping-cart'} onClick={toggleCart}></span> */}
       <div className={`${styles.miniCart} ${isOpen ? styles.open : ''}`}>
         <div className={styles.cartHeader}>
