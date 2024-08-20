@@ -1,4 +1,4 @@
-import styles from "../../assets/styles/adminLogin.module.css";
+import styles from "./styles/adminLogin.module.css";
 import { useState } from 'react';
 
 const AdminLogin = () => {

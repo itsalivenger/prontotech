@@ -1,33 +1,37 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import Slider from 'react-slick';
 import styles from '../../assets/styles/bannerCarousel.module.css';
-
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css"; 
 
 const BannerCarousel = ({ banners }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
-    }, 5000); // Change image every 5 seconds
-
-    return () => clearInterval(interval);
-  }, [banners.length]);
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000, // 5 seconds
+    arrows: true,
+    pauseOnHover: true,
+    adaptiveHeight: true
+  };
 
   return (
     <div className={styles.carouselContainer}>
-      {banners.map((banner, index) => (
-        <div
-          key={index}
-          className={`${styles.carouselSlide} ${index === currentIndex ? styles.active : ''}`}
-        >
-          <img src={banner.image} alt={banner.title} className={styles.carouselImage} />
-          <div className={styles.textContainer}>
-            <h2 className={styles.carouselTitle}>{banner.title}</h2>
-            <p className={styles.carouselSubtitle}>{banner.subtitle}</p>
-            {banner.buttonText && <button className={styles.carouselButton}>{banner.buttonText}</button>}
+      <Slider {...settings}>
+        {banners.map((banner, index) => (
+          <div key={index} className={styles.carouselSlide}>
+            <img src={banner.image} alt={banner.title} className={styles.carouselImage} />
+            <div className={styles.textContainer}>
+              <h2 className={styles.carouselTitle}>{banner.title}</h2>
+              <p className={styles.carouselSubtitle}>{banner.subtitle}</p>
+              {banner.buttonText && <button className={styles.carouselButton}>{banner.buttonText}</button>}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </Slider>
     </div>
   );
 };

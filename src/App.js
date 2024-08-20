@@ -26,6 +26,8 @@ import FloatingChat from './pages/components/FloatingChat';
 import { useState } from 'react';
 import PrivateRoute from './components/common/routing/PrivateRoute';
 import AdminLogin from './pages/adminPages/AdminLogin';
+import Compare from './pages/Compare';
+import AdminPage from './pages/adminPages/AdminPage';
 
 // import BackgroundImg from './pages/components/backgroundImg';
 
@@ -44,6 +46,7 @@ function App() {
       </>
     )
   };
+  
 
   return (
     <Router>
@@ -64,6 +67,8 @@ function App() {
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/resetPassword" element={<PasswordForgotten />} />
             <Route path='/adminLogin' element={<AdminLogin />} />
+            <Route path='/compare' element={<Compare />} />
+            <Route path='/test' element={<AdminPage />} />
 
             {/* Protected Routes */}
             <Route path="/checkout" element={<PrivateRoute isAuthenticated={isAuthenticated} element={Checkout} />} />

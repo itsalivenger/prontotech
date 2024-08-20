@@ -133,16 +133,21 @@
   align-items: center;
 }
 
-.gear{
+.gear {
   color: rgb(144, 144, 223);
 }
 
-.bars{
+.bars {
   color: #e61476;
 }
 
-.phoneMenu{
+.phoneMenu {
   display: none;
+}
+
+.categoriesBackground{
+  background-color: transparent;
+  z-index: -1;
 }
 
 /* Responsive Styles */
@@ -210,16 +215,21 @@
     padding: 0;
   }
 
-  .phoneMenu{
+  .phoneMenu {
     display: flex;
   }
-  
-  .mainNavBtnsContainer, .prontoBtn {
+
+  .mainNavBtnsContainer,
+  .prontoBtn {
     display: none !important;
   }
 
-  .toggleMenu{
+  .toggleMenu {
     display: flex;
+  }
+
+  .categoriesBackground {
+    background-color: rgba(0, 0, 0, 0.5);
   }
 
   /* .navbar {

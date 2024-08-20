@@ -1,0 +1,51 @@
+.dropdownContainer {
+    margin: 10px 0;
+  }
+  
+  .dropdownButton {
+    width: 100%;
+    background: none; /* No background color */
+    color: black; /* Text color */
+    border: none;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .mainIcon {
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    margin-right: 10px;
+  }
+  
+  .icon {
+    margin-left: auto; /* Pushes the icon to the right */
+    font-size: 18px;
+  }
+  
+  .subLinks {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+  
+  .subLinks.open {
+    max-height: 200px; /* Adjust based on the number of sub-links */
+  }
+  
+  .subLink {
+    display: block;
+    padding: 10px;
+    color: black; /* Text color */
+    text-decoration: none;
+    border-bottom: 1px solid #ccc; /* Light border */
+  }
+  
+  .subLink:hover {
+    color: #007bff; /* Highlight color on hover */
+  }
+  

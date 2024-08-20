@@ -1,8 +1,10 @@
 import styles from "../../assets/styles/backgroundToggler.module.css";
 
-function BackgroundToggler({ toggle, toggled }) {
+function BackgroundToggler({ handleToggle, toggled, transparent = false, className = '' }) {
     return (
-        <div onClick={toggle} className={styles.backgroundToggler + ' ' + (toggled ? styles.open : '')}>
+        <div onClick={handleToggle} className={`${className} ${styles.backgroundToggler} 
+        ${(toggled ? styles.open : '')} 
+        ${(transparent ? styles.transparent : '')}`}>
             
         </div>
     );

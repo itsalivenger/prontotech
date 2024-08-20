@@ -16,12 +16,12 @@ const MainNav = () => {
       <div className={styles.logo}>
         <ProntoTechBtn className={styles.prontoBtn} text={"Categories"} icon={"fa-bars"} onClick={toggleCategoriesMenu} />
         <Dropdown toggleCategoriesMenu={toggleCategoriesMenu} toggled={toggled} />
-        <BackgroundToggler toggle={toggleCategoriesMenu} toggled={toggled} />
+        <BackgroundToggler className={styles.categoriesBackground} handleToggle={toggleCategoriesMenu} toggled={toggled} />
       </div>
       <div className={styles.mainNavBtnsContainer}>
         <div className={styles.hamburger} onClick={toggleMenu}>
           <button className={styles.navBtns + " " + styles.menuBtn}>Menu &nbsp;<i className="fa fa-bars"></i></button>
-          <BackgroundToggler toggle={toggleMenu} toggled={isMenuOpen} />
+          {/* <BackgroundToggler handleToggle={toggleMenu} toggled={toggled} /> */}
         </div>
       </div>
       <div className={`${styles.sideNav} ${isMenuOpen ? styles.show : ''}`}>
