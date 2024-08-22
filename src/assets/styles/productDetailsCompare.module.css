@@ -3,7 +3,7 @@
   padding: 10px 0;
   border-bottom: 1px solid #ddd;
   transition: all 0.3s ease-in-out;
-  min-width: max-content; /* Ensure rows stretch horizontally */
+  min-width: max-content;
 }
 
 .featureRow:nth-child(even) {

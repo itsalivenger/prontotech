@@ -46,7 +46,7 @@ function App() {
       </>
     )
   };
-  
+
 
   return (
     <Router>
@@ -66,9 +66,9 @@ function App() {
             <Route path="/404" element={<NotFoundPage />} />
             <Route path="/catalog" element={<Catalog />} />
             <Route path="/resetPassword" element={<PasswordForgotten />} />
-            <Route path='/adminLogin' element={<AdminLogin />} />
             <Route path='/compare' element={<Compare />} />
-            <Route path='/test' element={<AdminPage />} />
+            <Route path='/adminLogin' element={<AdminLogin />} />
+            <Route path='/adminPage' element={<AdminPage />} />
 
             {/* Protected Routes */}
             <Route path="/checkout" element={<PrivateRoute isAuthenticated={isAuthenticated} element={Checkout} />} />

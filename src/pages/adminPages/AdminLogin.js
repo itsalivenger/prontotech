@@ -26,7 +26,7 @@ const AdminLogin = () => {
                         <option>Select Website</option>
                         <option value={'ProntoTech'}>ProntoTech</option>
                         <option value={'Vicky'}>Vicky</option>
-                        <option value={'Recyclage'}>Recyclage</option>
+                        <option value={'GreenEarth'}>GreenEarth</option>
                     </select>
                     <input type="text" value={userName} onChange={(e)=> setUserName(e.target.value)} placeholder="Username" className={styles.inputField} />
                     <div className={styles.passwordContainer}>

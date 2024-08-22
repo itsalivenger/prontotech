@@ -1,42 +1,37 @@
+import { useState } from 'react';
 import Breadcrumb from './components/BreadCrumb';
+import ItemSelection from './components/CompareItemsList';
 import ProductComparisonTable from './components/ProductComparisonTable';
 import SectionTitle from './components/SectionTitle';
 
-const products = [
-  {
-    name: 'Laptop A',
-    image: './images/products/laptop.png',
-    price: '1000 DH',
-    cpu: 'Intel i7',
-    ram: '16GB',
-    storage: '512GB SSD',
-    display: '15.6" 1080p'
-  },
-  {
-    name: 'Laptop B',
-    image: './images/products/desktop.png',
-    price: '1200 DH',
-    cpu: 'Intel i9',
-    ram: '32GB',
-    storage: '1TB SSD',
-    display: '17" 4K'
-  },{
-    name: 'Laptop A',
-    image: './images/products/laptop.png',
-    price: '1000 DH',
-    cpu: 'Intel i7',
-    ram: '16GB',
-    storage: '512GB SSD',
-    display: '15.6" 1080p'
-  },
-];
+
 
 function Compare() {
+  const [product1, setProduct1] = useState({});
+  const [product2, setProduct2] = useState({});
+  const [selectedItems, setSelectedItems] = useState([]);
+
+  const handleSelectItem = (product) => {
+    setSelectedItems((prev) =>
+      prev.includes(product)
+        ? prev.filter((item) => item !== product)
+        : prev.length < 2
+          ? [...prev, product]
+          : prev
+    );
+  };
+
+  const setProducts = (products) => {
+    setProduct1(products[0]);
+    setProduct2(products[1]);
+  };
+  
   return (
     <div>
       <Breadcrumb items={['Home', 'Compare']} />
       <SectionTitle title={'Compare Products'} />
-      <ProductComparisonTable products={products} />
+      <ItemSelection handleCompare={setProducts} selectedItems={selectedItems} handleSelectItem={handleSelectItem} />
+      <ProductComparisonTable product1={product1} product2={product2} />
     </div>
   );
 }

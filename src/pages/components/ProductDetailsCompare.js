@@ -1,9 +1,8 @@
 import React from 'react';
 import styles from '../../assets/styles/productDetailsCompare.module.css';
 
-
-
 const ProductDetails = ({ products }) => {
+  // List only shared properties for comparison
   const features = [
     { name: 'Price', key: 'price' },
     { name: 'CPU', key: 'cpu' },

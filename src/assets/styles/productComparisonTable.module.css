@@ -1,90 +1,82 @@
-.tableContainer {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  overflow-x: auto;
-  background-color: #fff;
+.comparisonContainer {
+  padding: 20px;
+  border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding-bottom: 20px; /* Add padding for horizontal scroll on larger screens */
+  background-color: #f9f9f9;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.headerRow {
-  display: flex;
-  background-color: #f4f4f4;
-  border-bottom: 2px solid #ddd;
-  color: #333;
+.header {
+  font-size: 24px;
+  margin-bottom: 20px;
   text-align: center;
-  min-width: max-content; /* Ensure the row stretches horizontally */
 }
 
-.featureName {
-  flex: 0 0 150px;
-  font-weight: bold;
-  padding: 10px;
-  background-color: #f4f4f4;
-}
-
-.productHeader {
-  flex: 0 0 150px;
-  padding: 10px;
+.comparisonContent {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
+}
+
+.product {
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .productImage {
-  width: 70px;
-  height: auto;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .productName {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.attributesTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attributesTable th,
+.attributesTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.attributesTable th {
+  background-color: #f2f2f2;
+}
+
+.attributeName {
   font-weight: bold;
-  font-size: 1rem;
-  color: #333;
 }
 
-/* Responsive Styling */
-@media (max-width: 768px) {
-  .headerRow {
-    flex-direction: column;
-    text-align: left;
-  }
+.attributeValue {
+  text-align: center;
+}
 
-  .productHeader {
+/* Responsive Styles */
+@media (min-width: 600px) {
+  .comparisonContent {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
   }
 
-  .productImage {
-    width: 50px;
-    margin-right: 10px;
-  }
-
-  .featureRow {
-    flex-direction: column;
-    padding: 5px;
-  }
-
-  .featureValue {
-    text-align: left;
+  .product {
+    margin: 0 10px;
   }
 }
 
-@media (max-width: 480px) {
-  .productImage {
-    width: 40px;
-  }
-
-  .featureName {
-    font-size: 0.9rem;
-    padding: 8px;
-  }
-
-  .featureValue {
-    font-size: 0.9rem;
-    padding: 8px;
+@media (max-width: 600px) {
+  .attributesTable {
+    font-size: 14px;
   }
 }

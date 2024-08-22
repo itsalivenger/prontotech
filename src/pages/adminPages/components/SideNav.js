@@ -1,35 +1,60 @@
 import { useState } from 'react';
 import styles from '../styles/sideNav.module.css';
-import DropdownLink from './SideNavLink';
 
 
+const SideNavLink = ({ link, isOpen, toggleDropdown }) => {
+  return (
+    <li className={styles.navItem}>
+      <div className={styles.navTitle} onClick={toggleDropdown}>
+        <img src={link.icon} alt={link.title} />
+        <span>{link.title}</span>
+        <span className={styles.dropdownIcon}>{isOpen ? '-' : '+'}</span>
+      </div>
+      <ul className={`${styles.subLinks} ${isOpen ? styles.open : ''}`}>
+        {link.subLinks.map((subLink, subIndex) => (
+          <li key={subIndex} className={styles.subLinkItem}>
+            <a href={subLink.url}>{subLink.title}</a>
+          </li>
+        ))}
+      </ul>
+    </li>
+  );
+};
 
-const Sidenav = ({ links, toggleLabel = '←' }) => {
-  const [isOpen, setIsOpen] = useState(true);
+const SideNav = ({ links }) => {
+  const [isNavOpen, setIsNavOpen] = useState(true);
+  const [openDropdown, setOpenDropdown] = useState(null);
 
-  const toggleSidenav = () => {
-    setIsOpen(prev => !prev);
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  const toggleDropdown = (index) => {
+    setOpenDropdown(openDropdown === index ? null : index);
   };
 
   return (
-    <div className={`${styles.sidenav} ${isOpen ? styles.open : styles.closed}`}>
-      <div className={styles.toggleSection}>
-        <button className={styles.toggleButton} onClick={toggleSidenav}>
-          {isOpen ? toggleLabel : '→'} {/* Toggle label or icon */}
-        </button>
+    <div>
+      <div className={styles.toggleButton + ' ' + (isNavOpen ? '' : styles.navToggle)} onClick={toggleNav}>
+        {isNavOpen ? '<<' : '>>'}
       </div>
-      <div className={styles.content}>
-        {links.map((link, index) => (
-          <DropdownLink 
-            key={index}
-            title={link.title} 
-            icon={link.icon} 
-            subLinks={link.subLinks} 
-          />
-        ))}
+      <div className={`${styles.sideNav} ${isNavOpen ? styles.open : styles.closed}`}>
+        <div className={styles.logo}>
+          <img src="./images/logos/prontoLogo.png" className="img img-fluid" alt="Logo" />
+        </div>
+        <ul className={styles.navLinks}>
+          {links.map((link, index) => (
+            <SideNavLink
+              key={index}
+              link={link}
+              isOpen={openDropdown === index}
+              toggleDropdown={() => toggleDropdown(index)}
+            />
+          ))}
+        </ul>
       </div>
     </div>
   );
 };
 
-export default Sidenav;
+export default SideNav;

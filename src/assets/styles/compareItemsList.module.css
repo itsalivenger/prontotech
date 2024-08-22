@@ -1,0 +1,187 @@
+.container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  flex: 1;
+  margin-right: 10px;
+}
+
+.searchButton {
+  padding: 10px 20px;
+  background-color: #37b9d3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.searchButton:hover {
+  background-color: #2d9cbb;
+}
+
+.carousel {
+  margin: 0 auto;
+}
+
+.item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+.item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.selected {
+  border-color: #37b9d3;
+  box-shadow: 0 4px 8px rgba(55, 185, 211, 0.2);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.details {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.category {
+  font-size: 14px;
+  color: #666;
+}
+
+.selectButton {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  background-color: #37b9d3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.selectButton:hover {
+  background-color: #2d9cbb;
+}
+
+.selectedItems {
+  margin-top: 30px;
+}
+
+.selectedItems h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.selectedItems ul {
+  list-style: none;
+  padding: 0;
+}
+
+.selectedItems li {
+  font-size: 16px;
+}
+
+.container {
+  padding: 20px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.header {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.noItems {
+  font-size: 16px;
+  color: #666;
+}
+
+.itemList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.itemName {
+  flex: 1;
+}
+
+.removeButton {
+  background-color: #e61476;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.removeButton:hover {
+  background-color: #d5136c;
+}
+
+.compareButton {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #37b9d3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.compareButton.disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.compareButton:hover {
+  background-color: #2d9cbb;
+}
