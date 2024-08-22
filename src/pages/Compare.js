@@ -3,7 +3,7 @@ import Breadcrumb from './components/BreadCrumb';
 import ItemSelection from './components/CompareItemsList';
 import ProductComparisonTable from './components/ProductComparisonTable';
 import SectionTitle from './components/SectionTitle';
-
+import ImagePair from './components/ImagePair';
 
 
 function Compare() {
@@ -29,6 +29,7 @@ function Compare() {
   return (
     <div>
       <Breadcrumb items={['Home', 'Compare']} />
+      <ImagePair portraitImage={'./images/flayers/flayer1.png'} landscapeImage={'./images/flayers/flayer1.jpg'} altText1={product1.name} altText2={product2.name} />
       <SectionTitle title={'Compare Products'} />
       <ItemSelection handleCompare={setProducts} selectedItems={selectedItems} handleSelectItem={handleSelectItem} />
       <ProductComparisonTable product1={product1} product2={product2} />

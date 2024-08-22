@@ -16,6 +16,7 @@ import GadgetCarousel from './components/GadgetCarousel';
 import Features from './components/Features';
 import A9wadCarousel from './components/A9wadCarousel';
 import RecentlyViewedCarousel from './components/RecentlyViewedCarousel';
+import CountersGroup from './components/IncrementGroup';
 const banners = [
     { 
       image: './images/banner1.jpg', 
@@ -46,6 +47,7 @@ function Home() {
             <DealsFeatured />
             {/* <PopularCategories /> */}
             <GadgetCarousel />
+            <CountersGroup />
             {/* <Banner2 /> */}
             <A9wadCarousel />
             <NewArrivals />

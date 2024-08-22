@@ -135,8 +135,8 @@
 
 .iconCount{
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 25px;
+    right: -7px;
     background-color: #e61476;
     color: white;
     border-radius: 50%;

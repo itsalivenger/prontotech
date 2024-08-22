@@ -1,0 +1,27 @@
+.countersContainer {
+    display: flex;
+    justify-content: space-around; /* Space between the counters */
+    align-items: center;
+    gap: 20px; /* Space between the counters */
+    padding: 20px;
+    flex-wrap: wrap;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .countersContainer {
+      gap: 15px; /* Reduce space between counters on smaller screens */
+      padding: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .countersContainer {
+      flex-direction: column; /* Stack counters vertically on small screens */
+      gap: 15px; /* Space between stacked counters */
+      padding: 10px;
+    }
+  }
+  
