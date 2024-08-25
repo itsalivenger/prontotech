@@ -44,20 +44,22 @@ const gadgetCarousel = () => {
   ];
 
   return (
-    <div className={styles.carouselContainer}>
-      <div className={styles.titleContainer}>
-        {/* <h2 className={styles.carouselTitle}>Popular Categories</h2> */}
-        <SectionTitle title={"Popular Categories"} />
-        <div className={styles.linkContainer}>
-          <Link to={'/catalog'}>View Full Catalog</Link>
+    <div>
+      <SectionTitle title={"Popular Categories"} />
+      <div className={styles.carouselContainer}>
+        <div className={styles.titleContainer}>
+          {/* <h2 className={styles.carouselTitle}>Popular Categories</h2> */}
+          <div className={styles.linkContainer}>
+            <Link to={'/catalog'}>View Full Catalog</Link>
+          </div>
         </div>
-      </div>
-      <div className={styles.sliderContainer}>
-        <Slider {...settings}>
-          {items.map((item, index) => (
-            <IconCard title={item.label} icon={item.icon} lightBlueBg={(index % 2 ? false : true)} />
-          ))}
-        </Slider>
+        <div className={styles.sliderContainer}>
+          <Slider {...settings}>
+            {items.map((item, index) => (
+              <IconCard title={item.label} icon={item.icon} lightBlueBg={(index % 2 ? false : true)} />
+            ))}
+          </Slider>
+        </div>
       </div>
     </div>
   );

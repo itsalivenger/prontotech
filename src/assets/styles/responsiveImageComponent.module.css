@@ -1,0 +1,201 @@
+.promotionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Top Section: Contains two promo divs */
+.topSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.promo {
+  flex: 1;
+  border-radius: 8px;
+  background-color: #fff;
+  overflow: hidden;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Common Promo Content Styles */
+.promoContent {
+  display: flex;
+  flex: 1;
+}
+
+.leftPromo .promoContent {
+  flex-direction: row;
+  /* Image and text side-by-side */
+  /* background: radial-gradient(rgb(84, 84, 84), #111); */
+  background: linear-gradient(145deg, #222222, #a0a3e0);
+  padding: 0 2em;
+  /* background-color: #111; */
+  color: white !important;
+}
+
+.rightPromo .promoContent {
+  flex-direction: column;
+  /* Text above image */
+  justify-content: space-between;
+}
+
+.rightPromo{
+  background-color: #CFDFEE;
+  max-width: 30%;
+}
+
+.rightPromo .imageContent{
+  padding: 0 3em 10px 3em;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  padding: 1.5rem 1em 0 1em;
+  position: relative;
+}
+
+.imageContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageContent img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.newCollection,
+.monthDeals {
+  background-color: #227a8b;
+  color: white;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.price {
+  color: #f5a623;
+  font-weight: bold;
+}
+
+.shopButton {
+  background-color: #e61476;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color .5s ease;
+  cursor: pointer;
+}
+
+.shopButton:hover{
+  background-color: #37b9d3;
+  color: white;
+}
+
+.shopButton,
+.newCollection,
+.monthDeals {
+  width: fit-content;
+}
+
+/* Bottom Section: Full width */
+.bottomSection {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.watchPromo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: white;
+  background: linear-gradient(45deg, #7695FF, #ff008352);
+  padding: 0 1.5rem;
+  border-radius: 8px;
+}
+
+.watchPromo .textContent {
+  flex: 1;
+  text-align: left;
+}
+
+.watchPromo .imageContent {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.watchPromo img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .topSection, .promoContent, .watchPromo {
+    flex-direction: column;
+  }
+
+  .leftPromo .promoContent {
+    padding: 1em;
+  }
+
+  .rightPromo{
+    max-width: 100%;
+  }
+
+  .imageContent {
+    margin-top: 1rem;
+  }
+
+  .watchPromo{
+    padding: 1em;
+  }
+
+  .shopButton {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .promotionsContainer {
+    padding: 0.5rem;
+  }
+
+  .textContent h2 {
+    font-size: 1.2rem;
+  }
+
+  .shopButton {
+    padding: 0.4rem 0.8rem;
+  }
+
+  .newCollection,
+  .monthDeals {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .leftPromo .promoContent{
+    flex-direction: column;
+  }
+}

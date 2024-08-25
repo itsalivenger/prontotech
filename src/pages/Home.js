@@ -17,6 +17,7 @@ import Features from './components/Features';
 import A9wadCarousel from './components/A9wadCarousel';
 import RecentlyViewedCarousel from './components/RecentlyViewedCarousel';
 import CountersGroup from './components/IncrementGroup';
+import ResponsiveImageComponent from './components/ResponsiveImageComponent';
 const banners = [
     { 
       image: './images/banner1.jpg', 
@@ -43,10 +44,10 @@ function Home() {
             <BannerCarousel banners={banners} />
             
             {/* <Characteristics /> */}
-            <Features />
             <DealsFeatured />
             {/* <PopularCategories /> */}
             <GadgetCarousel />
+            <ResponsiveImageComponent />
             <CountersGroup />
             {/* <Banner2 /> */}
             <A9wadCarousel />
@@ -55,6 +56,7 @@ function Home() {
             <ResponsiveImageBanner src={"./images/banner2.jpg"} alt={"banner"} />
             {/* <BestSellers /> */}
             <Carousel />
+            <Features />
             <Adverts />
             <Reviews />
             <RecentlyViewedCarousel />

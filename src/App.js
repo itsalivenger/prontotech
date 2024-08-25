@@ -38,11 +38,11 @@ function App() {
   // const [isAuthenticatedAdmin, setIsAuthenticatedAdmin] = useState(false);
   const contactInfo = {
     contactEmail: 'exemple@gmail.com',
-    contactPhone: '+212 776 41 25 46',
+    contactPhone: '+212 60 63 23 228',
     address: (
       <>
-        <span>17 Princess Road, London</span>
-        <span>Grester London NW18JR, UK</span>
+        <span>SOUK A LHED</span>
+        <span>NR 1042 PORT 6, AGADIR</span>
       </>
     )
   };

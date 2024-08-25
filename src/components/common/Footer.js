@@ -3,11 +3,10 @@ function Footer({ contactInfo: { contactPhone, address } }) {
         <footer className="footer">
             <div className="container">
                 <div className="row">
-
                     <div className="col-lg-3 footer_col">
                         <div className="footer_column footer_contact">
                             <div className="logo_container">
-                                <div className="logo"><a href="gegl">OneTech</a></div>
+                                <div className="logo"><a href="gegl"><img alt="Logo" className="img img-fluid" src={'./images/prontoLogo.png'} /></a></div>
                             </div>
                             <div className="footer_title">Got Question? Call Us 24/7</div>
                             <div className="footer_phone">{contactPhone}</div>

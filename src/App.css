@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+
 .prontoBgPink {
   background-color: #e61476;
 }
@@ -8,7 +10,8 @@
 
 .webpageContainer{
   background-color: white;
-  font-family: 'Rubik', sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  font: 16px/32px 'Work Sans', sans-serif;
 }
 
 .text-black {
@@ -1344,3 +1347,7 @@
 .categories span {
   cursor: pointer;
 }
+
+
+
+/* GOT IT FROM THE MAIN STYLES CSS */

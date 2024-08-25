@@ -9,7 +9,7 @@ const Features = () => {
         <i className={styles.featureIcon + ' fa fa-clock'}></i>
         <h3 className={styles.featureTitle}>PROCESS RAPIDE</h3>
         <p className={styles.featureDescription}>
-          RODAN vous permet de chercher les meilleures offres Maroc électroménager et multimédia du marché.
+          ProntoTech vous permet de chercher les meilleures offres Maroc électroménager et multimédia du marché.
         </p>
       </div>
       <div className={styles.featureItem}>

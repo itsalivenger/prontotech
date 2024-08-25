@@ -1,6 +1,5 @@
 import IncrementedCount from './IncrementCount';
 import styles from '../../assets/styles/incrementgroup.module.css';
-import { useRef } from 'react';
 
 
 const CountersGroup = () => {
