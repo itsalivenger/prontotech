@@ -7,7 +7,6 @@ import "slick-carousel/slick/slick-theme.css";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
-import Newsletter from './pages/components/Newsletter';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
@@ -39,6 +38,14 @@ function App() {
   const contactInfo = {
     contactEmail: 'exemple@gmail.com',
     contactPhone: '+212 60 63 23 228',
+    email: 'exemple@gmailcom',
+    socialMedia: {
+      facebook: '',
+      instagram: 'https://www.instagram.com/prontotech.ma?igsh=MWQ5enVpcXRhajc4Ng%3D%3D&utm_source=qr',
+      tiktok: 'https://www.tiktok.com/@prontotech.ma?_t=8p76hecPuS6&_r=1',
+      whatsapp: 'https://wa.me/message/X5WRA7RR2JZEA1',
+      twitter: '/'
+    },
     address: (
       <>
         <span>SOUK A LHED</span>
@@ -79,7 +86,6 @@ function App() {
           </Routes>
         </div>
         {/* <FloatingChat /> */}
-        <Newsletter />
         <Footer contactInfo={contactInfo} />
       </div>
     </Router>

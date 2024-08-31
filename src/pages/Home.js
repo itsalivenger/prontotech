@@ -18,21 +18,24 @@ import A9wadCarousel from './components/A9wadCarousel';
 import RecentlyViewedCarousel from './components/RecentlyViewedCarousel';
 import CountersGroup from './components/IncrementGroup';
 import ResponsiveImageComponent from './components/ResponsiveImageComponent';
+import SideImages from './components/SideImages';
+import Features2 from './components/Features2';
+import SectionTitle from './components/SectionTitle';
 const banners = [
     { 
-      image: './images/banner1.jpg', 
+      image: './images/banners/banner1.jpg', 
       title: 'Welcome to Our Store', 
       subtitle: 'Find our best deals on electronics', 
       buttonText: 'Shop Now' 
     },
     { 
-      image: './images/banner2.jpg', 
+      image: './images/banners/banner2.jpg', 
       title: 'Summer Collection', 
       subtitle: 'Emerge into our latest trends in fashion', 
       buttonText: 'Explore' 
     },
     { 
-      image: './images/banner3.avif', 
+      image: './images/banners/banner3.avif', 
       title: 'Tech Gadgets', 
       subtitle: 'Discover our Innovative tech products', 
       buttonText: 'Discover' 
@@ -45,6 +48,12 @@ function Home() {
             
             {/* <Characteristics /> */}
             <DealsFeatured />
+            <SideImages img1={'./images/banners/camera.png'} img2={'./images/banners/watch.png'} />
+            <SectionTitle title={'Features'} />
+            <Features2 icon1={'./images/icons/delivery.png'}
+                      icon2={'./images/icons/shield.png'}
+                      icon3={'./images/icons/confidence.png'}
+                      icon4={'./images/icons/help.png'} />
             {/* <PopularCategories /> */}
             <GadgetCarousel />
             <ResponsiveImageComponent />
@@ -53,10 +62,10 @@ function Home() {
             <A9wadCarousel />
             <NewArrivals />
             <TrendsCarousel />
-            <ResponsiveImageBanner src={"./images/banner2.jpg"} alt={"banner"} />
+            <ResponsiveImageBanner src={"./images/banners/banner2.jpg"} alt={"banner"} />
             {/* <BestSellers /> */}
             <Carousel />
-            <Features />
+            {/* <Features /> old features */}
             <Adverts />
             <Reviews />
             <RecentlyViewedCarousel />

@@ -1,0 +1,83 @@
+.brandsContainer {
+    display: flex;
+    width: 100%;
+    padding: 1em;
+    gap: 1em;
+}
+
+.brandCont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 300px;
+    border-radius: 20px;
+}
+
+.cameraBrand {
+    background-color: rgb(50, 53, 88);
+}
+
+.watchBrand {
+    background-color: rgb(54, 42, 42);
+}
+
+.brandTextCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 0px 1em;
+}
+
+.brandDeal {
+    color: white;
+    background-color: rgb(227, 36, 54);
+    padding: 2.5% 5%;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    font-size: 10px;
+    font-weight: 700;
+    width: fit-content;
+}
+
+.brandTitle {
+    color: white;
+    display: flex;
+    margin: 15px 0px;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.brandDiscount {
+    color: rgb(202, 169, 54);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.brandImg {
+    width: 350px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .brandsContainer{
+        flex-direction: column;
+        padding: .5em;
+    }
+
+    .brandCont{
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px){
+    .brandCont{
+        flex-direction: column-reverse;
+        height: fit-content;
+        overflow: hidden;
+        gap: 1em;
+        padding: .5em 0;
+    }
+}

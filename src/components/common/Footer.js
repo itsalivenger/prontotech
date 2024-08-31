@@ -1,77 +1,78 @@
-function Footer({ contactInfo: { contactPhone, address } }) {
+import Newsletter from '../../pages/components/Newsletter'
+
+function Footer({ contactInfo: { contactPhone, address, email, socialMedia } }) {
     return (
-        <footer className="footer">
-            <div className="container">
-                <div className="row">
-                    <div className="col-lg-3 footer_col">
-                        <div className="footer_column footer_contact">
-                            <div className="logo_container">
-                                <div className="logo"><a href="gegl"><img alt="Logo" className="img img-fluid" src={'./images/prontoLogo.png'} /></a></div>
+        <div>
+            <Newsletter media={socialMedia} />
+            <footer className="text-center text-lg-start bg-body-tertiary text-muted">
+                <section className="">
+                    <div className="container text-center text-md-start mt-5">
+                        <div className="row mt-3">
+                            <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                <h6 className="text-uppercase fw-bold mb-4">
+                                    <img alt="Logo" className="img img-fluid" src={'./images/prontoLogo.png'} />
+                                </h6>
+                                <p>
+                                    Here you can use rows and columns to organize your footer content. Lorem ipsum
+                                    dolor sit amet, consectetur adipisicing elit.
+                                </p>
                             </div>
-                            <div className="footer_title">Got Question? Call Us 24/7</div>
-                            <div className="footer_phone">{contactPhone}</div>
-                            <div className="footer_contact_text">
-                                {address}
+
+                            <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <h6 className="text-uppercase fw-bold mb-4">
+                                    Products
+                                </h6>
+                                <p>
+                                    <a href="#!" className="text-reset">Angular</a>
+                                </p>
+                                <p>
+                                    <a href="#!" className="text-reset">React</a>
+                                </p>
+                                <p>
+                                    <a href="#!" className="text-reset">Vue</a>
+                                </p>
+                                <p>
+                                    <a href="#!" className="text-reset">Laravel</a>
+                                </p>
                             </div>
-                            <div className="footer_social">
-                                <ul>
-                                    <li><a href="gegl"><i className="fab fa-facebook-f"></i></a></li>
-                                    <li><a href="gegl"><i className="fab fa-twitter"></i></a></li>
-                                    <li><a href="gegl"><i className="fab fa-youtube"></i></a></li>
-                                    <li><a href="gegl"><i className="fab fa-google"></i></a></li>
-                                    <li><a href="gegl"><i className="fab fa-vimeo-v"></i></a></li>
-                                </ul>
+
+                            <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <h6 className="text-uppercase fw-bold mb-4">
+                                    Useful links
+                                </h6>
+                                <p>
+                                    <a href="#!" className="text-reset">Pricing</a>
+                                </p>
+                                <p>
+                                    <a href="#!" className="text-reset">Settings</a>
+                                </p>
+                                <p>
+                                    <a href="#!" className="text-reset">Orders</a>
+                                </p>
+                                <p>
+                                    <a href="#!" className="text-reset">Help</a>
+                                </p>
+                            </div>
+
+                            <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
+                                <p><i className="fa fa-home me-3"></i> {address}</p>
+                                <p>
+                                    <i className="fa fa-envelope me-3"></i> {email}
+                                </p>
+                                <p><i className="fa fa-phone me-3"></i> {contactPhone}</p>
+                                <p><i className="fa fa-print me-3"></i> {contactPhone}</p>
                             </div>
                         </div>
                     </div>
+                </section>
 
-                    <div className="col-lg-2 offset-lg-2">
-                        <div className="footer_column">
-                            <div className="footer_title">Find it Fast</div>
-                            <ul className="footer_list">
-                                <li><a href="gegl">Computers & Laptops</a></li>
-                                <li><a href="gegl">Cameras & Photos</a></li>
-                                <li><a href="gegl">Hardware</a></li>
-                                <li><a href="gegl">Smartphones & Tablets</a></li>
-                                <li><a href="gegl">TV & Audio</a></li>
-                            </ul>
-                            <div className="footer_subtitle">Gadgets</div>
-                            <ul className="footer_list">
-                                <li><a href="gegl">Car Electronics</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-2">
-                        <div className="footer_column">
-                            <ul className="footer_list footer_list_2">
-                                <li><a href="gegl">Video Games & Consoles</a></li>
-                                <li><a href="gegl">Accessories</a></li>
-                                <li><a href="gegl">Cameras & Photos</a></li>
-                                <li><a href="gegl">Hardware</a></li>
-                                <li><a href="gegl">Computers & Laptops</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div className="col-lg-2">
-                        <div className="footer_column">
-                            <div className="footer_title">Customer Care</div>
-                            <ul className="footer_list">
-                                <li><a href="gegl">My Account</a></li>
-                                <li><a href="gegl">Order Tracking</a></li>
-                                <li><a href="gegl">Wish List</a></li>
-                                <li><a href="gegl">Customer Services</a></li>
-                                <li><a href="gegl">Returns / Exchange</a></li>
-                                <li><a href="gegl">FAQs</a></li>
-                                <li><a href="gegl">Product Support</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
+                <div className="text-center p-4" style={{ backgroundColor: "rgba(0, 0, 0, 0.05)" }}>
+                    © 2021 Copyright:
+                    Pronto Technology
                 </div>
-            </div>
-        </footer>
+            </footer>
+        </div>
     );
 }
 

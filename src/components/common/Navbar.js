@@ -7,7 +7,7 @@ import cartItems from "../../assets/styles/temp"
 import MainNav from "../../pages/components/MainNav";
 
 // MAIN NAV FIHA HUGE PROBLEM F WIDTH HWA LI KAYCAUSI L GAP FLIMEN T
-function Navbar({ contactInfo: { contactEmail, contactPhone } }) {
+function Navbar({ contactInfo: { contactEmail, contactPhone, socialMedia } }) {
     // const [searchProducts] = useState('');
     // const [searchCategory] = useState('All Categories');
     // const [cartCount] = useState(0);
@@ -34,7 +34,7 @@ function Navbar({ contactInfo: { contactEmail, contactPhone } }) {
             <HeaderMain toggleCart={toggleCart} />
             <MiniCart isOpen={isOpen} cartItems={cartItems} toggleCart={toggleCart} />
 
-            <MainNav />
+            <MainNav socialMedia={socialMedia} />
 
             {/* <div className="page_menu">
                 <div className="container">

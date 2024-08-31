@@ -1,55 +1,84 @@
 import styles from '../../assets/styles/productComparisonTable.module.css';
-import ProductDetails from './ProductDetailsCompare';
+// import ProductDetails from './ProductDetailsCompare';
 
-const ProductComparisonTable = ({ product1, product2 }) => {
-  if (!product1 || !product2) return null;
 
-  // Extract attributes from the product objects
-  const getAttributes = (product) => {
-    return Object.keys(product).filter(key => key !== 'id' && key !== 'name' && key !== 'image');
-  };
-
-  const attributes1 = getAttributes(product1);
-  const attributes2 = getAttributes(product2);
-
-  // Create a unified list of attributes to compare
-  const allAttributes = new Set([...attributes1, ...attributes2]);
-
-  const renderAttributeRow = (attribute) => (
-    <tr key={attribute}>
-      <td className={styles.attributeName}>{attribute}</td>
-      <td className={styles.attributeValue}>{product1[attribute] || 'N/A'}</td>
-      <td className={styles.attributeValue}>{product2[attribute] || 'N/A'}</td>
-    </tr>
-  );
-
+const ProductComparison = ({ products, features }) => {
+  const handleDeleteItem = (_id)=>{
+    console.log('deleted', _id)
+  }
   return (
-    <div className={styles.comparisonContainer}>
-      <h2 className={styles.header}>Product Comparison</h2>
-      <div className={styles.comparisonContent}>
-        <div className={styles.product}>
-          <img src={product1.image} alt={product1.name} className={styles.productImage} />
-          <h3 className={styles.productName}>{product1.name}</h3>
+    <div className='container'>
+      <ProductCount productCount={products.length} />
+      <div className={styles.comparisonContainer}>
+        {/* Table Headers */}
+        <div className={styles.headerRow}>
+          <div className={styles.featureCell}></div>
+          {products.map((product, index) => (
+            <div key={index} className={styles.productCell}>
+              <div className={styles.removeItemIcon} onClick={()=> handleDeleteItem(product._id)}>
+                <i className='fa fa-times'></i>
+              </div>
+              <img src={product.image} alt={product.name} className={styles.productImage} />
+              <h3 className={styles.productName}>{product.name}</h3>
+            </div>
+          ))}
         </div>
-        <div className={styles.product}>
-          <img src={product2.image} alt={product2.name} className={styles.productImage} />
-          <h3 className={styles.productName}>{product2.name}</h3>
-        </div>
+
+        {/* Feature Rows */}
+        {features.map((feature, index) => (
+          <div key={index} className={styles.featureRow}>
+            <div className={styles.featureCell}>{feature.label}</div>
+            {products.map((product, index) => (
+              <div key={index} className={styles.productCell}>
+                {product[feature.key]}
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
-      <table className={styles.attributesTable}>
-        <thead>
-          <tr>
-            <th className={styles.attributeHeader}>Attribute</th>
-            <th className={styles.attributeHeader}>{product1.name}</th>
-            <th className={styles.attributeHeader}>{product2.name}</th>
-          </tr>
-        </thead>
-        <tbody>
-          {[...allAttributes].map(renderAttributeRow)}
-        </tbody>
-      </table>
     </div>
   );
 };
 
-export default ProductComparisonTable;
+
+const ProductCount = ({ productCount, onClearAll, onRemoveLast }) => {
+  return (
+    <div className={styles.productCountContainer}>
+      <div className={styles.countInfo}>
+        <span className={styles.countNumber}>{productCount}</span>
+        <span className={styles.countText}>
+          {productCount === 1 ? 'product' : 'products'} in comparison
+        </span>
+      </div>
+      
+      <div className={styles.actions}>
+        <button 
+          className={styles.actionButton} 
+          onClick={onClearAll} 
+          disabled={productCount === 0}
+          title="Clear all products from comparison"
+        >
+          Clear All
+        </button>
+        
+        <button 
+          className={styles.actionButton} 
+          onClick={onRemoveLast} 
+          disabled={productCount === 0}
+          title="Remove the last product added to comparison"
+        >
+          Remove Last
+        </button>
+        
+        {productCount < 5 && (
+          <button className={styles.addMoreButton} title="Add more products to compare">
+            Add More Products
+          </button>
+        )}
+      </div>
+    </div>
+  );
+};
+
+
+export default ProductComparison;
